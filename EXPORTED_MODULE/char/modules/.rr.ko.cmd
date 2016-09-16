@@ -1,0 +1,1 @@
+cmd_/home/ravi_raja/Backup/char/rr.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ravi_raja/Backup/char/rr.ko /home/ravi_raja/Backup/char/rr.o /home/ravi_raja/Backup/char/rr.mod.o

@@ -1,0 +1,34 @@
+head	1.1;
+access;
+symbols;
+locks
+	ravi_raja:1.1; strict;
+comment	@ * @;
+
+
+1.1
+date	2016.06.21.06.26.30;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@Function that is being exported to the kernel symbol table
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include"header.h"
+#include"declaration.h"
+
+int MyExpMod()
+{
+	printk(KERN_INFO "BEGIN: %s", __func__);
+	printk(KERN_INFO "END: %s", __func__);
+	return 0;
+}
+@

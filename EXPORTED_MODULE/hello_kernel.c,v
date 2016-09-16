@@ -1,0 +1,225 @@
+head	1.8;
+access;
+symbols;
+locks
+	ravi_raja:1.8; strict;
+comment	@ * @;
+
+
+1.8
+date	2016.06.21.06.31.42;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.06.20.08.39.01;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.06.20.07.46.32;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.06.18.11.13.49;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.06.18.08.26.15;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.17.19.49.54;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.17.09.43.38;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.17.07.15.29;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@This inserts the .ko file to device table entry
+It says hello to the kernel using printk and KERN_INFO priority
+@
+
+
+1.8
+log
+@MyExpMod Exported to the kernel symbol table using EXPORT_SYMBOL
+@
+text
+@#include"header.h"
+#include"declaration.h"
+#include"fops.h"
+
+dev_t dev;
+int nod, majorno, minorno, ret;
+struct Dev *quant;
+struct cdev c_dev;
+module_param(nod, int, S_IRUGO);
+
+static int __init func_name(void)
+{
+
+	printk(KERN_INFO "Hello Kernel , My Driver is getting registered\n");
+
+	ret = alloc_chrdev_region( &dev, MAJORNO, nod, NAME );
+
+
+	if(ret == -1)
+	{
+		printk(KERN_INFO "ERROR: alloc_chrdev_region FAILED");
+	}
+
+	majorno = MAJOR(dev);
+	minorno = MINOR(dev);
+	dev = MKDEV(majorno, minorno);
+	printk(KERN_INFO "majorno = %d\n", majorno);
+	printk(KERN_INFO "minorno = %d\n", minorno);
+
+	if(!(quant = (struct Dev *)kmalloc(sizeof(struct Dev)*nod, GFP_KERNEL)))
+	{
+		printk(KERN_INFO "ERROR: kmalloc Failed.");
+	}
+	else
+	{
+		printk(KERN_INFO "Memory allocation Successful!");
+	}
+	memset(quant, '\0', sizeof(struct Dev *)*nod);
+	cdev_init(&quant->c_dev, &fops);
+	quant->c_dev.owner = THIS_MODULE;
+	quant->c_dev.ops = &fops;
+	
+	printk(KERN_INFO "cdev initialization Successful!");
+
+	cdev_add(&quant->c_dev, dev, majorno);
+	printk(KERN_INFO "CDEV Added");
+	MyExpMod();
+	return 0;
+}
+module_init(func_name);
+@
+
+
+1.7
+log
+@logical errors removed and testing
+@
+text
+@d47 1
+a47 1
+	
+@
+
+
+1.6
+log
+@module_param usewd for passing command line parameters
+@
+text
+@d18 1
+@
+
+
+1.5
+log
+@struct cdev added to the Device Table Entry
+@
+text
+@d8 2
+a9 1
+struct cdev *c_dev;
+d15 2
+a16 1
+	ret = alloc_chrdev_region( &dev, MAJORNO, NOD, NAME );
+d25 1
+a25 1
+
+d29 1
+a29 1
+	if(!(quant = (struct Dev *)kmalloc(sizeof(struct Dev)*NOD, GFP_KERNEL)))
+d37 5
+a41 2
+	memset(quant, '\0', sizeof(struct Dev *)*NOD);
+	cdev_init(c_dev, &fops);
+d44 2
+a45 8
+	if(!(cdev_add(c_dev, dev, MAJORNO)))
+	{
+		printk(KERN_INFO "ERROR: cdev_add Failed");
+	}
+	else
+	{
+		printk(KERN_INFO "CDEV Added");
+	}
+@
+
+
+1.4
+log
+@Memory is Allocated to strcut Dev (user defined data structure) usnig kmalloc
+@
+text
+@d8 1
+d27 1
+a27 1
+	if(!(quant = (struct Dev *)kmalloc(sizeof(struct Dev)*NOD, GFP_KERNEL)));
+d31 4
+d36 12
+@
+
+
+1.3
+log
+@Allocate space/map memory on device using malloc.
+@
+text
+@d3 1
+d26 1
+a26 1
+	if((quant = kmalloc(sizeof(strcut Dev), GFP_KERNEL)));
+d28 1
+a28 1
+		printk(KERN_INFO "kmalloc successful");
+d30 1
+@
+
+
+1.2
+log
+@alloc_chrdev_region called for registering the driver returns 0 for success
+arguments are dev_t * type variable for storing the major no and minor no as 12 bits + 20 bits
+majorno and minorno are printed in dmesg using kernel macros MAJOR and MINOR
+@
+text
+@d3 1
+d6 2
+d12 2
+a13 1
+	ret = alloc_chrdev_region( &dev, MAJORNO, nod, NAME );
+d18 1
+d21 1
+d24 5
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 3
+d7 11
+a17 1
+	printk(KERN_INFO "hello kernel , we come\n");
+@

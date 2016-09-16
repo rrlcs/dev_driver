@@ -1,0 +1,358 @@
+head	1.20;
+access;
+symbols;
+locks
+	ravi_raja:1.20; strict;
+comment	@ * @;
+
+
+1.20
+date	2016.07.12.08.31.22;	author ravi_raja;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2016.07.12.06.20.19;	author ravi_raja;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2016.07.11.18.41.42;	author ravi_raja;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2016.07.04.14.41.25;	author ravi_raja;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2016.07.01.07.29.02;	author ravi_raja;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2016.06.27.09.33.06;	author ravi_raja;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2016.06.27.08.44.50;	author ravi_raja;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.06.25.04.03.15;	author ravi_raja;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.06.25.03.36.08;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.06.24.14.23.13;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.06.24.14.08.27;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.06.24.11.52.06;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.06.24.10.29.04;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.06.21.11.17.36;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.06.21.06.27.20;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.06.20.07.51.46;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.06.18.11.22.45;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.18.08.27.50;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.17.19.51.01;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.17.09.49.04;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@extern dev_t dev decalared
+extern int majorno, minorno, nod declared
+@
+
+
+1.20
+log
+@spinlock_t type variable my_lock declared
+@
+text
+@extern dev_t dev, newdev;
+extern int nod, majorno, minorno, noi, noq, qsetsize, quantumsize, devicesize, datasize;
+
+struct Qset
+{
+	struct Qset *next;
+	void ** data;
+};
+
+struct Dev
+{
+	struct Qset *firstqs;
+	struct cdev c_dev;
+	int qsetsize;
+	int quantumsize;
+	int devicesize;
+	int datasize;
+	struct semaphore sem;
+	struct completion my_completion;
+	spinlock_t my_lock;
+};
+//extern struct cdev c_dev;
+extern struct Dev *quant;
+int MyExpMod(void); 
+int dev_open(struct inode *, struct file *);
+int dev_release(struct inode *, struct file *);
+ssize_t dev_write(struct file *, const char __user *, size_t, loff_t *);
+ssize_t dev_read(struct file *, char __user *, size_t, loff_t *);
+int dev_trim(struct Dev *);
+loff_t dev_lseek(struct file *, loff_t, int);
+struct Qset * create_scull(int);
+@
+
+
+1.19
+log
+@struct completion my_completion declared in the device representaion structure
+@
+text
+@d20 1
+@
+
+
+1.18
+log
+@struct semaphore sem declared
+@
+text
+@d19 1
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d18 1
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+extern int nod, majorno, minorno, noi, qsetsize, quantumsize, devicesize, datasize;
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+extern int nod, majorno, minorno, noi, qsetsize, quantumsize;
+a7 2
+	int qsetsize;
+	int quantumsize;
+d14 4
+@
+
+
+1.14
+log
+@declarartions for create_scull declared.
+new variables declared like quantumsize and qsetsize and noi
+@
+text
+@d8 2
+a15 2
+	int qsetsize;
+	int quantumsize;
+@
+
+
+1.13
+log
+@newdev declared extern
+@
+text
+@d2 1
+a2 1
+extern int nod, majorno, minorno;
+d12 1
+a12 1
+	struct Qset *first;
+d14 2
+d26 1
+@
+
+
+1.12
+log
+@lseek
+@
+text
+@d1 1
+a1 1
+extern dev_t dev;
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d23 1
+@
+
+
+1.10
+log
+@prototypes for dev_trim and dev_release declared
+@
+text
+@d21 1
+a21 1
+ssize_t dev_read(struct file *, const char __user *, size_t, loff_t *);
+@
+
+
+1.9
+log
+@prototype for read declared.
+@
+text
+@d19 1
+d22 1
+@
+
+
+1.8
+log
+@prototype for file operations write written.
+@
+text
+@d20 1
+@
+
+
+1.7
+log
+@prototype declared for dev_open
+@
+text
+@d19 1
+@
+
+
+1.6
+log
+@prototype for MyExpMod function added
+@
+text
+@d18 1
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d17 1
+a17 1
+ 
+@
+
+
+1.4
+log
+@extern struct cdev *c_dev declared.
+@
+text
+@d13 1
+a13 1
+	struct cdev *c_dev;
+d15 1
+a15 1
+extern struct cdev *c_dev;
+@
+
+
+1.3
+log
+@struct Dev and struct Qset declared
+@
+text
+@d15 1
+@
+
+
+1.2
+log
+@Free allocate memory using kfree
+@
+text
+@d9 1
+d13 1
+a13 1
+	struct cdev;
+d16 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 12
+@

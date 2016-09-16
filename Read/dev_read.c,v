@@ -1,0 +1,294 @@
+head	1.12;
+access;
+symbols;
+locks
+	ravi_raja:1.12; strict;
+comment	@ * @;
+
+
+1.12
+date	2016.07.08.14.34.31;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.07.08.13.53.54;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.07.08.12.15.57;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.07.08.11.44.31;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.07.08.11.31.37;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.07.08.11.17.38;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.07.08.08.17.19;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.07.08.08.01.32;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.07.08.07.19.35;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.24.14.23.08;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.24.14.06.44;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.24.11.51.30;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@divece driver's read routine.
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declaration.h"
+
+ssize_t dev_read(struct file *filep, char __user *buff, size_t size, loff_t * loff)
+{
+	struct Qset *lsqset;
+	struct Dev *ldev;
+	int noctr, noctr1, nocnr, bytes, j;
+	printk(KERN_INFO "BEGIN: %s", __func__);
+	ldev = (struct Dev*)filep->private_data;
+	lsqset = ldev->firstqs;
+	if(!lsqset)
+		goto OUT;
+	noctr = ldev->datasize;
+
+	printk(KERN_INFO"noctr is %d\n",noctr);
+
+	j = 0;	
+	bytes = 0;
+
+	while(noctr)
+	{
+			if(noctr >= quantumsize)
+                                noctr1 = quantumsize;
+                        else
+                                noctr1 = noctr;
+
+                         nocnr = copy_to_user(buff+bytes, lsqset->data[j], noctr1);
+                         noctr = noctr - noctr1;
+                         printk(KERN_INFO "data_read = %s",(char *)lsqset->data[j]);
+                         bytes = bytes + noctr1 - nocnr;
+                         if(j == (qsetsize - 1))
+                         {
+                        	 j = 0;
+                         	lsqset = lsqset->next;
+                        	 if(!lsqset)
+                                 {
+				       goto OUT;
+				 }
+                         }
+                                else
+                                        j++;
+
+	}
+        ldev->datasize = ldev->datasize - bytes;
+	printk(KERN_INFO "END: %s datasize = %d\n", __func__, ldev->datasize);
+	printk(KERN_INFO "END: %s", __func__);
+	return bytes;
+OUT:
+        printk(KERN_INFO "INFO: nocnr = %d\n", nocnr);
+        printk(KERN_ERR "ERROR: Read Failed!\n");
+        return 0;
+
+}
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d30 1
+a30 1
+                         printk(KERN_INFO "data_read = %s",buff);
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@a28 2
+//			 if(nocnr)
+	//			goto OUT;
+d30 1
+a30 1
+                //         printk(KERN_INFO "data_read = %s",buff);
+a31 1
+                     //    ldev->datasize = ldev->datasize - bytes;
+d45 1
+a45 1
+
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d21 1
+a21 1
+/*	while(noctr)
+d48 1
+a48 1
+	*/
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d20 2
+a21 1
+	while(noctr)
+d48 1
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d28 2
+a29 2
+			 if(nocnr)
+				goto OUT;
+d31 1
+a31 1
+                         printk(KERN_INFO "data_read = %s",buff);
+d33 1
+a33 1
+                         ldev->datasize = ldev->datasize - bytes;
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d15 3
+d22 1
+a22 1
+		if(noctr >= quantumsize)
+d27 16
+a42 14
+                                nocnr = copy_to_user(buff+bytes, lsqset->data[j], noctr);
+				if(nocnr)
+					goto OUT;
+                                noctr = noctr - noctr1;
+                                printk(KERN_INFO "data_read = %s",buff);
+                                bytes = bytes + noctr1 - nocnr;
+                                ldev->datasize = ldev->datasize - bytes;
+                                if(j == (qsetsize - 1))
+                                {
+                                        j = 0;
+                                        lsqset = lsqset->next;
+                                        if(!lsqset)
+                                        {       goto OUT;}
+                                }
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d12 2
+d28 1
+a28 1
+                                printk(KERN_INFO "data_read = %s",(char *)lsqset->data[j]);
+@
+
+
+1.4
+log
+@Reading data from scull and updating the datasize
+@
+text
+@d23 2
+d44 1
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d6 3
+d10 29
+d40 5
+a44 1
+	return 0;
+@
+
+
+1.2
+log
+@read.
+@
+text
+@d4 1
+a4 1
+ssize_t dev_read(struct file *filep, const char __user *buff, size_t size, loff_t * loff)
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 2
+a7 2
+	printk(KERN_INFO "BEGIN: %s", __FILE__);
+	printk(KERN_INFO "END: %s", __FILE__);
+@

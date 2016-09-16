@@ -1,0 +1,1 @@
+cmd_/home/ravi_raja/Backup/EXPORTED_MODULE/test_rr.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ravi_raja/Backup/EXPORTED_MODULE/test_rr.ko /home/ravi_raja/Backup/EXPORTED_MODULE/test_rr.o /home/ravi_raja/Backup/EXPORTED_MODULE/test_rr.mod.o

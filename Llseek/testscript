@@ -1,0 +1,99 @@
+#! /bin/bash
+PWD := $(shell pwd)
+ciformake()
+{
+	for file in $(ls *.c)
+	do
+		ci *.c
+	done
+		
+	for file in $(ls *.h)
+	do
+		ci *.h
+	done
+}
+
+coformake()
+{
+	read -p "Do You Want to Checkout for Make" response
+	if [ $response = 'y' ]
+	then
+		for file in $(ls *.c,v)
+		do
+			co *.c,v
+		done
+		
+		for file in $(ls *.h,v)
+		do
+			co *.h,v
+		done
+	fi
+}
+
+edit()
+{
+	read -p "Do you want to checkount for editing?(y/n)" resp
+	if [ $resp = 'y' ]
+	then
+	#	for file in $(ls *.c,v)
+	#	do
+			co -l *.c,v
+	#	done
+	#	for file in $(ls *.h,v)
+	#	do
+			co -l *.h,v
+	#	done
+	fi
+}
+insert()
+{
+	insmod ./modules/rr.ko nod=$1
+	lsmod
+	read
+	cat /proc/devices
+	read
+	dmesg
+	read -p "Do you want to perform any operations on your driver?(y/n):" resp1
+	if [ $resp1 = 'y' ]
+	then
+		if ( make -C $PWD/apps )
+		then
+			mv ./apps/app .
+			read -p "Enter the Major No: " majorno
+			mknod node c $majorno 0
+			ls -al
+			read
+			./app
+		fi
+	fi
+}
+
+remove()
+{
+	rmmod rr
+	lsmod
+	read
+	cat /proc/devices
+	read
+	dmesg
+	read
+}
+
+ciformake
+coformake
+
+if ( make )
+then
+	read -p "Do you want to insert your driver(y/n): " res
+	if [ $res = 'y' ]
+	then
+		insert $1
+	fi
+fi
+
+read -p "Do you want to remove your driver(y/n): " ans
+if [ $ans = 'y' ]
+then
+	remove
+fi
+edit

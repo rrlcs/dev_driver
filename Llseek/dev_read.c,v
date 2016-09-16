@@ -1,0 +1,520 @@
+head	1.22;
+access;
+symbols;
+locks
+	ravi_raja:1.22; strict;
+comment	@ * @;
+
+
+1.22
+date	2016.07.11.18.36.49;	author ravi_raja;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2016.07.11.12.42.46;	author ravi_raja;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2016.07.11.08.25.09;	author ravi_raja;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2016.07.11.07.24.06;	author ravi_raja;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2016.07.10.12.26.27;	author ravi_raja;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2016.07.10.12.19.22;	author ravi_raja;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2016.07.10.11.07.20;	author ravi_raja;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2016.07.10.10.38.17;	author ravi_raja;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2016.07.10.10.37.35;	author ravi_raja;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.07.10.10.35.23;	author ravi_raja;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.07.08.14.34.31;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.07.08.13.53.54;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.07.08.12.15.57;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.07.08.11.44.31;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.07.08.11.31.37;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.07.08.11.17.38;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.07.08.08.17.19;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.07.08.08.01.32;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.07.08.07.19.35;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.24.14.23.08;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.24.14.06.44;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.24.11.51.30;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@divece driver's read routine.
+@
+
+
+1.22
+log
+@Implementing semaphores synchronization technique
+@
+text
+@#include"header.h"
+#include"declaration.h"
+
+ssize_t dev_read(struct file *filep, char __user *buff, size_t size, loff_t * loff)
+{
+	struct Qset *lsqset;
+	struct Dev *ldev;
+	int noctr, noctr1, nocnr, bytes, j, q2s, b2s;
+	printk(KERN_INFO "BEGIN: %s", __func__);
+	printk(KERN_INFO "OFFSET: %d",(int)*loff);
+
+	ldev = (struct Dev*)filep->private_data;
+
+	//*loff = filep->f_pos;
+
+	printk(KERN_INFO "OFFSET: %d",(int)*loff);
+	printk(KERN_INFO "OFFSET: %d",(int)filep->f_pos);
+
+	q2s = *loff/quantumsize;
+	b2s = *loff%quantumsize;
+
+	lsqset = ldev->firstqs;
+
+	if(!lsqset)
+		goto OUT;
+	noctr = ldev->datasize - *loff;
+	
+	printk(KERN_INFO"noctr is %d\n",noctr);
+
+	j = q2s;	
+
+	bytes = 0;
+
+	if(down_interruptible(&ldev->sem))
+		return -ERESTARTSYS;	
+	while(noctr)
+	{
+		if(noctr >= quantumsize)
+                        noctr1 = quantumsize;
+                else
+                        noctr1 = noctr;
+
+                nocnr = copy_to_user(buff+bytes, lsqset->data[j]+b2s, noctr1);
+                noctr = noctr - noctr1;
+                printk(KERN_INFO "data_read = %s",(char *)lsqset->data[j]+b2s);
+                bytes = bytes + noctr1 - nocnr;
+		*loff = *loff + (noctr1 -nocnr); 
+		if(j == (qsetsize - 1))
+                {
+                        j = 0;
+                	lsqset = lsqset->next;
+                        if(!lsqset)
+                        {
+			       goto OUT;
+		        }
+                }
+                else
+                	j++;
+
+	}
+        ldev->datasize = ldev->datasize - bytes;
+	printk(KERN_INFO "END: %s datasize = %d\n", __func__, ldev->datasize);
+	printk(KERN_INFO "END: %s", __func__);
+	return bytes;
+OUT:
+        printk(KERN_INFO "INFO: nocnr = %d\n", nocnr);
+        printk(KERN_ERR "ERROR: Read Failed!\n");
+	up(&ldev->sem);
+        return 0;
+
+}
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d33 3
+a35 1
+	
+d68 1
+@
+
+
+1.20
+log
+@*** empty log message ***
+@
+text
+@d43 1
+a43 1
+                printk(KERN_INFO "data_read = %s",(char *)lsqset->data[j]);
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d17 1
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d8 1
+a8 1
+	int noctr, noctr1, nocnr, bytes, j, q2s;
+d14 1
+a14 1
+	*loff = filep->f_pos;
+d18 2
+a19 1
+	q2s = *loff/8;
+a32 2
+	ssleep(4);
+	
+d35 21
+a55 20
+			if(noctr >= quantumsize)
+                                noctr1 = quantumsize;
+                        else
+                                noctr1 = noctr;
+
+                         nocnr = copy_to_user(buff+bytes, lsqset->data[j], noctr1);
+                         noctr = noctr - noctr1;
+                         printk(KERN_INFO "data_read = %s",(char *)lsqset->data[j]);
+                         bytes = bytes + noctr1 - nocnr;
+                         if(j == (qsetsize - 1))
+                         {
+                        	 j = 0;
+                         	lsqset = lsqset->next;
+                        	 if(!lsqset)
+                                 {
+				       goto OUT;
+				 }
+                         }
+                                else
+                                        j++;
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d32 1
+a32 1
+	mdelay(10000);
+@
+
+
+1.16
+log
+@reading after lseeking the file to offset loff set by the application
+@
+text
+@d31 3
+a33 1
+
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d8 1
+a8 1
+	int noctr, noctr1, nocnr, bytes, j;
+d11 1
+d13 1
+d15 1
+d17 3
+d21 1
+d24 3
+a26 1
+	noctr = ldev->datasize;
+d28 1
+a28 1
+	printk(KERN_INFO"noctr is %d\n",noctr);
+a29 1
+	j = 0;	
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d10 1
+a10 1
+	printk(KERN_INFO "OFFSET: %d",*loff);
+d13 1
+a13 1
+	printk(KERN_INFO "OFFSET: %d",*loff);
+@
+
+
+1.13
+log
+@offset loff updated from f_pos of struct file
+@
+text
+@d10 1
+a10 1
+	printk(KERN_INFO "OFFSET: %d",(int)loff);
+d12 2
+a13 2
+	loff = filep->f_pos;
+	printk(KERN_INFO "OFFSET: %d",(int)loff);
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d10 1
+d12 2
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d30 1
+a30 1
+                         printk(KERN_INFO "data_read = %s",buff);
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@a28 2
+//			 if(nocnr)
+	//			goto OUT;
+d30 1
+a30 1
+                //         printk(KERN_INFO "data_read = %s",buff);
+a31 1
+                     //    ldev->datasize = ldev->datasize - bytes;
+d45 1
+a45 1
+
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d21 1
+a21 1
+/*	while(noctr)
+d48 1
+a48 1
+	*/
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d20 2
+a21 1
+	while(noctr)
+d48 1
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d28 2
+a29 2
+			 if(nocnr)
+				goto OUT;
+d31 1
+a31 1
+                         printk(KERN_INFO "data_read = %s",buff);
+d33 1
+a33 1
+                         ldev->datasize = ldev->datasize - bytes;
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d15 3
+d22 1
+a22 1
+		if(noctr >= quantumsize)
+d27 16
+a42 14
+                                nocnr = copy_to_user(buff+bytes, lsqset->data[j], noctr);
+				if(nocnr)
+					goto OUT;
+                                noctr = noctr - noctr1;
+                                printk(KERN_INFO "data_read = %s",buff);
+                                bytes = bytes + noctr1 - nocnr;
+                                ldev->datasize = ldev->datasize - bytes;
+                                if(j == (qsetsize - 1))
+                                {
+                                        j = 0;
+                                        lsqset = lsqset->next;
+                                        if(!lsqset)
+                                        {       goto OUT;}
+                                }
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d12 2
+d28 1
+a28 1
+                                printk(KERN_INFO "data_read = %s",(char *)lsqset->data[j]);
+@
+
+
+1.4
+log
+@Reading data from scull and updating the datasize
+@
+text
+@d23 2
+d44 1
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d6 3
+d10 29
+d40 5
+a44 1
+	return 0;
+@
+
+
+1.2
+log
+@read.
+@
+text
+@d4 1
+a4 1
+ssize_t dev_read(struct file *filep, const char __user *buff, size_t size, loff_t * loff)
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 2
+a7 2
+	printk(KERN_INFO "BEGIN: %s", __FILE__);
+	printk(KERN_INFO "END: %s", __FILE__);
+@

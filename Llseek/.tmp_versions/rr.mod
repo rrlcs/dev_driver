@@ -1,0 +1,2 @@
+/home/ravi_raja/Backup/DeviceDriver/Llseek/rr.ko
+/home/ravi_raja/Backup/DeviceDriver/Llseek/hello_kernel.o /home/ravi_raja/Backup/DeviceDriver/Llseek/clean.o /home/ravi_raja/Backup/DeviceDriver/Llseek/dev_open.o /home/ravi_raja/Backup/DeviceDriver/Llseek/dev_write.o /home/ravi_raja/Backup/DeviceDriver/Llseek/dev_read.o /home/ravi_raja/Backup/DeviceDriver/Llseek/dev_trim.o /home/ravi_raja/Backup/DeviceDriver/Llseek/dev_release.o /home/ravi_raja/Backup/DeviceDriver/Llseek/dev_lseek.o /home/ravi_raja/Backup/DeviceDriver/Llseek/create_scull.o

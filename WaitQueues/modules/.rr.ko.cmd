@@ -1,0 +1,1 @@
+cmd_/home/ravi_raja/Backup/DeviceDriver/WaitQueues/rr.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ravi_raja/Backup/DeviceDriver/WaitQueues/rr.ko /home/ravi_raja/Backup/DeviceDriver/WaitQueues/rr.o /home/ravi_raja/Backup/DeviceDriver/WaitQueues/rr.mod.o

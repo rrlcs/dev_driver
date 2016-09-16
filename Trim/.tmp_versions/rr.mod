@@ -1,0 +1,2 @@
+/home/ravi_raja/Backup/DeviceDriver/Trim/rr.ko
+/home/ravi_raja/Backup/DeviceDriver/Trim/hello_kernel.o /home/ravi_raja/Backup/DeviceDriver/Trim/clean.o /home/ravi_raja/Backup/DeviceDriver/Trim/dev_open.o /home/ravi_raja/Backup/DeviceDriver/Trim/dev_write.o /home/ravi_raja/Backup/DeviceDriver/Trim/dev_read.o /home/ravi_raja/Backup/DeviceDriver/Trim/dev_trim.o /home/ravi_raja/Backup/DeviceDriver/Trim/dev_release.o /home/ravi_raja/Backup/DeviceDriver/Trim/dev_lseek.o /home/ravi_raja/Backup/DeviceDriver/Trim/create_scull.o

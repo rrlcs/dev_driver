@@ -1,0 +1,1759 @@
+head	1.85;
+access;
+symbols;
+locks
+	ravi_raja:1.85; strict;
+comment	@ * @;
+
+
+1.85
+date	2016.07.11.18.36.49;	author ravi_raja;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2016.07.11.14.20.56;	author ravi_raja;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2016.07.11.14.18.19;	author ravi_raja;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2016.07.11.12.42.46;	author ravi_raja;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2016.07.11.12.29.29;	author ravi_raja;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2016.07.11.12.21.57;	author ravi_raja;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2016.07.11.12.18.31;	author ravi_raja;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2016.07.11.09.40.23;	author ravi_raja;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2016.07.11.09.38.07;	author ravi_raja;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2016.07.11.08.56.18;	author ravi_raja;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2016.07.11.08.20.16;	author ravi_raja;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2016.07.11.08.19.31;	author ravi_raja;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2016.07.11.08.00.38;	author ravi_raja;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2016.07.11.07.55.01;	author ravi_raja;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2016.07.11.07.43.47;	author ravi_raja;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2016.07.11.07.35.13;	author ravi_raja;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2016.07.11.07.24.06;	author ravi_raja;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2016.07.10.12.55.15;	author ravi_raja;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2016.07.10.12.40.44;	author ravi_raja;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2016.07.10.12.40.10;	author ravi_raja;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2016.07.08.12.07.13;	author ravi_raja;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2016.07.08.11.58.55;	author ravi_raja;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2016.07.08.11.55.49;	author ravi_raja;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2016.07.08.05.02.21;	author ravi_raja;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2016.07.08.04.52.33;	author ravi_raja;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2016.07.08.04.51.40;	author ravi_raja;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2016.07.08.04.51.02;	author ravi_raja;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2016.07.01.07.32.11;	author ravi_raja;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2016.07.01.07.28.57;	author ravi_raja;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2016.07.01.04.23.23;	author ravi_raja;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2016.07.01.04.20.44;	author ravi_raja;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2016.07.01.03.43.25;	author ravi_raja;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2016.06.30.17.35.21;	author ravi_raja;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2016.06.30.17.26.15;	author ravi_raja;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2016.06.30.17.25.11;	author ravi_raja;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2016.06.30.17.22.59;	author ravi_raja;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2016.06.30.14.10.12;	author ravi_raja;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2016.06.30.14.06.43;	author ravi_raja;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2016.06.30.14.03.56;	author ravi_raja;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2016.06.30.13.46.27;	author ravi_raja;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2016.06.30.13.38.46;	author ravi_raja;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2016.06.30.13.28.22;	author ravi_raja;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2016.06.30.13.03.32;	author ravi_raja;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2016.06.30.13.02.45;	author ravi_raja;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2016.06.30.12.54.10;	author ravi_raja;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2016.06.30.12.42.11;	author ravi_raja;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2016.06.30.12.13.27;	author ravi_raja;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2016.06.30.12.01.49;	author ravi_raja;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2016.06.30.11.46.59;	author ravi_raja;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2016.06.30.11.44.47;	author ravi_raja;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2016.06.30.11.33.59;	author ravi_raja;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2016.06.30.11.27.00;	author ravi_raja;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2016.06.30.11.17.45;	author ravi_raja;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2016.06.30.11.07.44;	author ravi_raja;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2016.06.30.10.59.59;	author ravi_raja;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2016.06.30.10.57.28;	author ravi_raja;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2016.06.30.10.55.14;	author ravi_raja;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2016.06.30.10.47.49;	author ravi_raja;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2016.06.30.10.36.09;	author ravi_raja;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2016.06.30.10.31.08;	author ravi_raja;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2016.06.30.09.55.03;	author ravi_raja;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2016.06.30.09.22.59;	author ravi_raja;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2016.06.30.09.19.16;	author ravi_raja;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2016.06.30.09.11.45;	author ravi_raja;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2016.06.30.08.49.07;	author ravi_raja;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2016.06.30.08.40.43;	author ravi_raja;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2016.06.30.08.31.47;	author ravi_raja;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2016.06.30.08.26.16;	author ravi_raja;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2016.06.30.08.20.10;	author ravi_raja;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2016.06.30.08.09.57;	author ravi_raja;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2016.06.30.08.05.54;	author ravi_raja;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2016.06.30.08.01.10;	author ravi_raja;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.06.30.07.50.24;	author ravi_raja;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.06.30.07.46.51;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.06.30.07.44.37;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.06.30.07.37.37;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.06.30.07.27.57;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.06.30.07.21.42;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.06.30.07.19.01;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.06.30.06.43.05;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.06.28.07.12.52;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.06.27.11.59.42;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.27.09.33.00;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.27.08.42.31;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.24.10.28.14;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@write routine for the user defined device driver
+@
+
+
+1.85
+log
+@Implementing semaphores synchronization technique
+@
+text
+@#include"header.h"
+#include"declaration.h"
+int bytes;
+ssize_t dev_write(struct file *filep, const char __user *buff, size_t size, loff_t *loff)
+{
+	int noitc,  nocsnw = 0, j, q2s, b2s;
+	struct Qset * lsqset;
+	struct Dev * ldev;
+	int noctw;
+
+	printk(KERN_INFO "BEGIN: write()");
+
+	ldev = (struct Dev *)filep->private_data;
+
+        ldev->firstqs = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL);
+
+	*loff = filep->f_pos;
+
+	printk(KERN_ERR "FILEP->F_POR =");
+
+	printk(KERN_INFO "LOFF = %d", (int)*loff);
+
+	q2s = *loff/quantumsize;//quantum to skip
+	b2s = *loff%quantumsize;//bytes to skip in a quantum
+
+	if(!ldev->firstqs)
+        {
+                printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+		goto OUT;
+        }
+
+	noitc = (int)size;
+
+	lsqset = NULL;
+	
+	if(down_interruptible(&ldev->sem))
+		return -ERESTARTSYS;
+
+	ldev->firstqs = create_scull(noitc);
+
+	if(!ldev->firstqs)
+	{	goto OUT;}
+
+	lsqset = ldev->firstqs;
+	bytes = *loff;
+
+	printk(KERN_INFO "noi = %d", noi);
+	printk(KERN_INFO "size = %d", (int)size);
+	printk(KERN_INFO "loff = %d", (int)*loff);
+	printk(KERN_INFO "ldev->datasize = %d\n", ldev->datasize);
+
+	j = q2s;
+	noitc = noitc - (int)*loff;
+
+	printk(KERN_INFO "noitc = %d", noitc);
+
+	while(noitc)
+	{
+		if(noitc >= quantumsize)
+			noctw = quantumsize;
+		else
+			noctw = noitc;
+		nocsnw = copy_from_user(lsqset->data[j]+b2s, buff+bytes, noctw);
+		noitc = noitc - noctw;
+		printk(KERN_INFO "data_written = %s",(char *)lsqset->data[j]+b2s);
+		bytes = bytes + noctw - nocsnw;
+		if(j == (qsetsize - 1))
+		{
+			j = 0;
+			lsqset = lsqset->next;
+			if(!lsqset)
+			{
+				goto OUT;
+			}
+		}
+		else
+			j++;
+	}
+	up(&ldev->sem);
+	bytes = bytes - *loff;
+	*loff = *loff + bytes;
+	//filep->f_pos = 0;
+	ldev->datasize = bytes;
+	printk(KERN_INFO "END: ldev->datasize = %d\n", ldev->datasize);
+	printk(KERN_INFO "END: write()");
+	return bytes;
+OUT: 
+	printk(KERN_ERR "ERROR: write failed!\n");
+	up(&ldev->sem);
+	return 0;
+}
+@
+
+
+1.84
+log
+@*** empty log message ***
+@
+text
+@d35 4
+d79 1
+d89 1
+@
+
+
+1.83
+log
+@*** empty log message ***
+@
+text
+@d77 1
+a77 1
+	filep->f_pos = 0;
+@
+
+
+1.82
+log
+@*** empty log message ***
+@
+text
+@d77 1
+@
+
+
+1.81
+log
+@*** empty log message ***
+@
+text
+@a56 2
+//		else if(b2s)
+//			noctw = quantumsize - b2s;
+d61 1
+a61 1
+		printk(KERN_INFO "data_written = %s",(char *)lsqset->data[j]);
+a62 1
+//		*loff = *loff + noctw - nocsnw;
+@
+
+
+1.80
+log
+@*** empty log message ***
+@
+text
+@d65 1
+a65 1
+		*loff = *loff + noctw - nocsnw;
+d79 1
+@
+
+
+1.79
+log
+@*** empty log message ***
+@
+text
+@d57 2
+a58 2
+		else if(b2s)
+			noctw = quantumsize - b2s;
+@
+
+
+1.78
+log
+@*** empty log message ***
+@
+text
+@d57 2
+d78 1
+@
+
+
+1.77
+log
+@*** empty log message ***
+@
+text
+@d19 1
+a19 1
+	printk(KERN_INFO "FILEP->F_POS =");
+@
+
+
+1.76
+log
+@*** empty log message ***
+@
+text
+@d19 1
+a19 1
+	printk(KERN_INFO "FILEP->F_POS = %d", (int)filep->f_pos);
+@
+
+
+1.75
+log
+@*** empty log message ***
+@
+text
+@d10 1
+a10 2
+	printk(KERN_INFO "FILEP->F_POS = %d", (int)filep->f_pos);
+	printk(KERN_INFO "LOFF = %d", (int)*loff);
+d14 1
+d16 1
+d18 1
+d20 1
+d22 1
+d33 1
+d36 1
+d42 1
+d50 1
+d52 1
+@
+
+
+1.74
+log
+@*** empty log message ***
+@
+text
+@d10 1
+a10 1
+	printk(KERN_INFO "FILEP->F_POS = %d", filep->f_pos);
+d17 1
+a17 1
+	printk(KERN_INFO "FILEP->F_POS = %d", filep->f_pos);
+@
+
+
+1.73
+log
+@*** empty log message ***
+@
+text
+@d10 2
+d17 2
+a18 1
+	printk(KERN_INFO "loff = %d", (int)*loff);
+@
+
+
+1.72
+log
+@*** empty log message ***
+@
+text
+@d4 1
+a4 1
+ssize_t dev_write(struct file *filep, const char __user *buff, size_t size, loff_t * loff)
+d15 1
+@
+
+
+1.71
+log
+@*** empty log message ***
+@
+text
+@d14 1
+a14 1
+
+d39 1
+@
+
+
+1.70
+log
+@*** empty log message ***
+@
+text
+@d34 1
+d38 1
+a38 1
+	noitc = noitc - *loff;
+@
+
+
+1.69
+log
+@*** empty log message ***
+@
+text
+@d37 1
+@
+
+
+1.68
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	int noitc,  nocsnw = 0, j;
+d14 4
+a25 1
+	ssleep(4);
+d31 1
+a31 1
+	bytes = 0;
+d36 13
+a48 2
+		j = 0;
+		while(noitc)
+d50 6
+a55 19
+			if(noitc >= quantumsize)
+				noctw = quantumsize;
+			else
+				noctw = noitc;
+		
+				nocsnw = copy_from_user(lsqset->data[j], buff+bytes, noctw);
+				noitc = noitc - noctw;
+				printk(KERN_INFO "data_written = %s",(char *)lsqset->data[j]);
+				bytes = bytes + noctw - nocsnw;
+
+				if(j == (qsetsize - 1))
+				{
+					j = 0;
+					lsqset = lsqset->next;
+					if(!lsqset)
+					{	goto OUT;}
+				}
+				else
+					j++;
+d57 3
+@
+
+
+1.67
+log
+@*** empty log message ***
+@
+text
+@d22 1
+d32 1
+a32 1
+	ssleep(4);
+@
+
+
+1.66
+log
+@*** empty log message ***
+@
+text
+@d31 1
+a31 1
+	sleep(4);
+@
+
+
+1.65
+log
+@*** empty log message ***
+@
+text
+@d31 1
+@
+
+
+1.64
+log
+@*** empty log message ***
+@
+text
+@d43 1
+a43 1
+				ldev->datasize = ldev->datasize + bytes;
+d54 1
+@
+
+
+1.63
+log
+@*** empty log message ***
+@
+text
+@d30 1
+@
+
+
+1.62
+log
+@*** empty log message ***
+@
+text
+@d53 1
+@
+
+
+1.61
+log
+@*** empty log message ***
+@
+text
+@d22 2
+a23 2
+	ldev->firstqs->next = create_scull(noitc);
+	if(!ldev->firstqs->next)
+d26 1
+a26 1
+	lsqset = ldev->firstqs->next;
+@
+
+
+1.60
+log
+@*** empty log message ***
+@
+text
+@d26 1
+a26 1
+	lsqset = ldev->firstqs-next;
+@
+
+
+1.59
+log
+@*** empty log message ***
+@
+text
+@d23 1
+a23 1
+	if(!ldev->firstqs-next)
+@
+
+
+1.58
+log
+@*** empty log message ***
+@
+text
+@d22 2
+a23 2
+	ldev->firstqs = create_scull(noitc);
+	if(!ldev->firstqs)
+d26 1
+a26 1
+	lsqset = ldev->firstqs;
+@
+
+
+1.57
+log
+@*** empty log message ***
+@
+text
+@d41 1
+a41 1
+				bytes = bytes + noctw - noitc;
+@
+
+
+1.56
+log
+@*** empty log message ***
+@
+text
+@a6 1
+	int quantumsize = QUANTUMSIZE;
+a29 5
+//	nocsw = copy_from_user(lsqset->data[0], buff+bytes, quantumsize);
+//		printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[0]);
+//	bytes = bytes + quantumsize;
+//	nocsw = copy_from_user(lsqset->data[1], buff+bytes, quantumsize);
+//			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[1]);
+d41 3
+a43 2
+				bytes = bytes + noctw;
+				if(j == (QSETSIZE - 1))
+@
+
+
+1.55
+log
+@*** empty log message ***
+@
+text
+@d44 1
+a44 1
+				nocsnw = copy_from_user(lsqset->data[j], buff-bytes, noctw);
+@
+
+
+1.54
+log
+@*** empty log message ***
+@
+text
+@d44 1
+a44 1
+				nocsnw = copy_from_user(lsqset->data[j], buff+bytes, noctw);
+@
+
+
+1.53
+log
+@*** empty log message ***
+@
+text
+@d14 6
+a19 6
+       // ldev->firstqs = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL);
+//	if(!ldev->firstqs)
+ //       {
+  //              printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+//		goto OUT;
+//        }
+d24 2
+a25 2
+//	if(!ldev->firstqs)
+//	{	goto OUT;}
+d51 3
+a53 3
+					lsqset = ldev->firstqs->next;
+				//	if(!lsqset)
+				//	{	goto OUT;}
+d60 3
+a62 3
+//OUT: 
+//	printk(KERN_ERR "ERROR: write failed!\n");
+//	return 0;
+@
+
+
+1.52
+log
+@*** empty log message ***
+@
+text
+@d14 6
+a19 6
+        ldev->firstqs = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL);
+	if(!ldev->firstqs)
+        {
+                printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+	//	goto OUT;
+        }
+@
+
+
+1.51
+log
+@*** empty log message ***
+@
+text
+@d24 1
+a24 1
+	if(!ldev->firstqs)
+d52 1
+a52 1
+					if(!lsqset)
+@
+
+
+1.50
+log
+@*** empty log message ***
+@
+text
+@d18 1
+a18 1
+		goto OUT;
+d25 1
+a25 1
+	{	goto OUT;}
+d53 1
+a53 1
+					{	goto OUT;}
+d60 3
+a62 3
+OUT: 
+	printk(KERN_ERR "ERROR: write failed!\n");
+	return 0;
+@
+
+
+1.49
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+		goto OUT;
+d53 1
+a53 1
+						goto OUT;
+@
+
+
+1.48
+log
+@*** empty log message ***
+@
+text
+@d51 1
+a51 1
+					lsqset = lsqset->next;
+@
+
+
+1.47
+log
+@*** empty log message ***
+@
+text
+@d61 1
+@
+
+
+1.46
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	int noitc,  nocsnw = 0, i, j;
+d27 1
+a27 1
+/*	lsqset = ldev->firstqs;
+d59 1
+a59 1
+*/	return bytes;
+@
+
+
+1.45
+log
+@*** empty log message ***
+@
+text
+@d18 1
+d27 1
+a27 1
+	lsqset = ldev->firstqs;
+d59 1
+a59 1
+	return bytes;
+@
+
+
+1.44
+log
+@*** empty log message ***
+@
+text
+@d60 1
+a60 1
+	return -1;
+@
+
+
+1.43
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	int qsetsize = QSETSIZE, quantumsize = QUANTUMSIZE;
+a34 2
+	for(i=0; i<noi; i++)
+	{
+a56 1
+	}
+@
+
+
+1.42
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	int noitc,  nocsnw = 0, j;
+@
+
+
+1.41
+log
+@*** empty log message ***
+@
+text
+@d35 1
+a35 2
+	j = 0;
+	while(noitc)
+d37 5
+a41 16
+		if(noitc >= quantumsize)
+			noctw = quantumsize;
+		else
+			noctw = noitc;
+	
+			nocsnw = copy_from_user(lsqset->data[j], buff+bytes, noctw);
+			noitc = noitc - noctw;
+			printk(KERN_INFO "data_written = %s",(char *)lsqset->data[j]);
+			bytes = bytes + noctw;
+			if(j == (QSETSIZE - 1))
+			{
+				j = 0;
+				lsqset = lsqset->next;
+				if(!lsqset)
+					goto OUT;
+			}
+d43 16
+a58 1
+				j++;
+@
+
+
+1.40
+log
+@*** empty log message ***
+@
+text
+@d36 1
+a36 1
+/*	while(noitc)
+d57 1
+a57 1
+*/	printk(KERN_INFO "END: write()");
+@
+
+
+1.39
+log
+@*** empty log message ***
+@
+text
+@d23 3
+d59 2
+a60 2
+//OUT: 
+//	return -1;
+@
+
+
+1.38
+log
+@*** empty log message ***
+@
+text
+@d33 1
+a33 1
+	while(noitc)
+d54 1
+a54 1
+	printk(KERN_INFO "END: write()");
+d56 2
+a57 2
+OUT: 
+	return -1;
+@
+
+
+1.37
+log
+@*** empty log message ***
+@
+text
+@d44 1
+a44 1
+			if(j == qsetsize - 1)
+d48 2
+d56 2
+@
+
+
+1.36
+log
+@*** empty log message ***
+@
+text
+@d10 1
+d19 1
+a19 1
+	int noctw;
+d32 1
+a32 1
+	
+d42 1
+a42 1
+			printk(KERN_INFO "data_written = %s", nocsnw, (char *)lsqset->data[j]);
+@
+
+
+1.35
+log
+@*** empty log message ***
+@
+text
+@d18 1
+a18 1
+
+d34 16
+a49 10
+		for(j = 0; j<3; j++)
+		{
+			nocsnw = copy_from_user(lsqset->data[j], buff+bytes, quantumsize);
+			noitc = noitc - quantumsize;
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsnw, (char *)lsqset->data[j]);
+			bytes = bytes + quantumsize;
+			//if(j == qsetsize - 1)
+			//	j = 0;
+		}
+		lsqset = lsqset->next;
+@
+
+
+1.34
+log
+@*** empty log message ***
+@
+text
+@d36 1
+a36 1
+			nocsnw = copy_from_user(lsqset->data[j], buff, quantumsize);
+@
+
+
+1.33
+log
+@*** empty log message ***
+@
+text
+@d34 1
+a34 1
+		for(j = 0; j<qsetsize; j++)
+d36 1
+a36 1
+			nocsnw = copy_from_user(lsqset->data[j], buff+bytes, quantumsize);
+@
+
+
+1.32
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	int noitc,  nocsw = 0, j;
+d36 1
+a36 1
+			nocsw = copy_from_user(lsqset->data[j], buff+bytes, quantumsize);
+d38 4
+a41 4
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[j]);
+			bytes = bytes + nocsw;
+			if(j == qsetsize - 1)
+				j = 0;
+@
+
+
+1.31
+log
+@*** empty log message ***
+@
+text
+@d26 5
+a30 5
+	nocsw = copy_from_user(lsqset->data[0], buff+bytes, quantumsize);
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[0]);
+	bytes = bytes + quantumsize;
+	nocsw = copy_from_user(lsqset->data[1], buff+bytes, quantumsize);
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[1]);
+d32 1
+a32 1
+/*	while(noitc)
+d45 1
+a45 1
+*/	printk(KERN_INFO "END: write()");
+@
+
+
+1.30
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+	bytes = bytes + nocsw;
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@d28 3
+a30 3
+//	bytes = bytes + nocsw;
+//	nocsw = copy_from_user(lsqset->data[1], buff+bytes, quantumsize);
+			//printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[1]);
+@
+
+
+1.28
+log
+@*** empty log message ***
+@
+text
+@d22 1
+a22 1
+/*	lsqset = ldev->firstqs;
+d32 1
+a32 1
+	while(noitc)
+@
+
+
+1.27
+log
+@*** empty log message ***
+@
+text
+@d22 1
+a22 1
+	lsqset = ldev->firstqs;
+d32 1
+a32 1
+/*	while(noitc)
+@
+
+
+1.26
+log
+@*** empty log message ***
+@
+text
+@d28 3
+a30 3
+	bytes = bytes + nocsw;
+	nocsw = copy_from_user(lsqset->data[1], buff+bytes, quantumsize);
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[1]);
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@d27 1
+a27 1
+//			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[0]);
+d30 1
+a30 1
+//			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[1]);
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d27 1
+a27 1
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[0]);
+d30 1
+a30 1
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[1]);
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d27 5
+@
+
+
+1.22
+log
+@*** empty log message ***
+@
+text
+@d26 2
+a27 1
+	while(noitc)
+d31 1
+a31 1
+			nocsw = copy_from_user(lsqset->data[j], buff, quantumsize);
+d40 1
+a40 1
+	printk(KERN_INFO "END: write()");
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	int noitc,  nocsw = 0, i, j;
+d19 1
+a19 1
+	noitc = size;
+a22 1
+	i = 0;
+d26 1
+a26 1
+	while(i<noi)
+d31 1
+d34 1
+a34 1
+			if(j>quantumsize)
+a37 1
+		i++;
+@
+
+
+1.20
+log
+@*** empty log message ***
+@
+text
+@d31 2
+a32 2
+			nocsw = copy_from_user(ldev->firstqs->data[j], buff, quantumsize);
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)ldev->firstqs->data[j]);
+d37 1
+a37 1
+		ldev->firstqs = lsqset->next;
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d34 2
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d31 2
+a32 2
+			nocsw = copy_from_user(lsqset->data[j], buff, quantumsize);
+			printk(KERN_INFO "nocsw = %d, data_written = %s", nocsw, (char *)lsqset->data[j]);
+d35 1
+a35 1
+		lsqset = ldev->firstqs->next;
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d27 1
+a27 1
+/*	while(i<noi)
+d35 1
+a35 1
+		lsqset = lsqset->next;
+d38 1
+a38 1
+*/	printk(KERN_INFO "END: write()");
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d27 1
+a27 1
+	while(i<noi)
+a28 1
+		lsqset = lsqset->next;
+d35 1
+a35 1
+
+d38 1
+a38 1
+	printk(KERN_INFO "END: write()");
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 2
+	int noitc;// nocsw = 0, i, j;
+//	int qsetsize = QSETSIZE, quantumsize = QUANTUMSIZE;
+d23 2
+a24 2
+//	i = 0;
+//	bytes = 0;
+d27 1
+a27 1
+/*	while(i<noi)
+d29 1
+d36 1
+a36 1
+			lsqset = lsqset->next;
+d39 1
+a39 1
+*/	printk(KERN_INFO "END: write()");
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 2
+	int noitc, nocsw = 0, i, j;
+	int qsetsize = QSETSIZE, quantumsize = QUANTUMSIZE;
+d23 2
+a24 2
+	i = 0;
+	bytes = 0;
+d27 1
+a27 1
+	while(i<noi)
+d38 1
+a38 1
+	printk(KERN_INFO "END: write()");
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@a32 1
+			lsqset = lsqset->next;
+d35 1
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+int noi, bytes;
+d26 1
+a26 1
+	printk(KERN_INFO "size = %d", size);
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d26 1
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d25 2
+a26 1
+	while(i<2)
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+int noi;
+d24 1
+a24 1
+	int ret = 0;
+d32 1
+a32 1
+			ret = ret + nocsw;
+d37 1
+a37 1
+	return ret;
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+	while(noi)
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d24 1
+d32 1
+d37 1
+a37 1
+	return 0;
+@
+
+
+1.6
+log
+@data written to kernel buffer using copy_from_user
+@
+text
+@d3 1
+a3 1
+
+d21 2
+a22 1
+	lsqset = ldev->firstqs = create_scull(noitc);
+d24 1
+a24 1
+	while(noitc)
+@
+
+
+1.5
+log
+@wrong assignment made correct.
+@
+text
+@d6 3
+a8 2
+	int noitc;
+	//struct Qset * lsqset;
+d20 13
+a32 1
+	ldev->firstqs = create_scull(noitc);
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	struct Qset * lsqset;
+d19 1
+a19 1
+	lsqset = create_scull(noitc);
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d11 1
+a11 1
+	ldev = filep->private_data;
+@
+
+
+1.2
+log
+@create_scull is called to allocate memory to the device so that one can perform read write and other file operations
+@
+text
+@d8 1
+d10 8
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 2
+d9 2
+@

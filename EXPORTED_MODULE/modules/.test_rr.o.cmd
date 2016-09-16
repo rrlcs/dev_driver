@@ -1,0 +1,1 @@
+cmd_/home/ravi_raja/Backup/EXPORTED_MODULE/test_rr.o := ld -m elf_x86_64   -r -o /home/ravi_raja/Backup/EXPORTED_MODULE/test_rr.o /home/ravi_raja/Backup/EXPORTED_MODULE/hello_kernel.o /home/ravi_raja/Backup/EXPORTED_MODULE/clean.o 

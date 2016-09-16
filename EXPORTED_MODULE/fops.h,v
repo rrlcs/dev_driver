@@ -1,0 +1,46 @@
+head	1.2;
+access;
+symbols;
+locks
+	ravi_raja:1.2; strict;
+comment	@ * @;
+
+
+1.2
+date	2016.06.18.11.22.45;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.18.08.27.50;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@Header file containing file operations that will be performed by the driver
+struct file_operations declared
+@
+
+
+1.2
+log
+@file_operations
+@
+text
+@struct file_operations fops =
+{
+	
+};
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+
+@

@@ -1,0 +1,655 @@
+head	1.25;
+access;
+symbols;
+locks
+	ravi_raja:1.25; strict;
+comment	@ * @;
+
+
+1.25
+date	2016.07.04.16.38.48;	author ravi_raja;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2016.07.04.16.33.38;	author ravi_raja;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2016.07.04.16.20.46;	author ravi_raja;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2016.07.04.16.15.39;	author ravi_raja;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2016.07.04.16.11.59;	author ravi_raja;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2016.07.04.16.08.11;	author ravi_raja;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2016.07.04.16.02.33;	author ravi_raja;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2016.07.04.16.00.51;	author ravi_raja;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2016.07.04.15.54.11;	author ravi_raja;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2016.07.04.15.45.45;	author ravi_raja;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2016.07.04.14.51.49;	author ravi_raja;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2016.07.04.14.41.22;	author ravi_raja;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.07.04.13.41.09;	author ravi_raja;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.07.04.13.20.15;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.07.04.11.28.21;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.07.04.10.52.44;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.07.04.10.51.08;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.07.04.10.27.31;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.07.04.08.40.49;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.07.04.08.20.24;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.07.04.07.40.59;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.07.04.07.32.15;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.07.01.12.23.49;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.24.14.23.08;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.24.14.06.44;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@it flushes the file opened in write only mode.
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declaration.h"
+
+int dev_trim(struct Dev *fdev)
+{
+	struct Qset * lsqset, *slqset;
+	int l, i;
+	printk(KERN_INFO "BEGIN: %s", __func__);
+	if(!fdev)
+		printk(KERN_ERR "ERROR: Device Not Found");
+	lsqset = fdev->firstqs;
+	slqset = lsqset;	
+	while(lsqset)
+	{
+	/*	if(!lsqset->next)
+		{
+			printk(KERN_INFO "INFO: kfree successful");
+			kfree(slqset);
+			slqset = NULL;
+		}
+	*/	while(lsqset->next)
+		{
+			slqset = lsqset;
+			lsqset = lsqset->next;
+			if(!lsqset)
+				goto OUT1;
+		}
+		i = 0;
+		for(l=noq-1; l>=0; l--)
+		{
+			if(lsqset->data[i])
+			{
+				kfree(lsqset->data[i]);
+				if(lsqset->data[i])
+					goto OUT2;
+				lsqset->data[i] = NULL;
+			}
+			if(i == qsetsize-1)
+			{
+				kfree(lsqset->data);
+				if(lsqset->data)
+					goto OUT3;
+				lsqset->data = NULL;
+
+				kfree(slqset->next);
+				if(slqset->next)
+					goto OUT4;
+				slqset->next = NULL;
+				lsqset = slqset;
+			}
+			else
+			{
+				i++;
+			}
+			
+		}
+
+
+		if(!slqset->next)
+		{
+			kfree(slqset);
+			if(slqset)
+				goto OUT5;
+			slqset = NULL;		
+		}
+	}
+	
+	printk(KERN_INFO "END: %s", __func__);
+	return 0;
+OUT1:
+	printk(KERN_ERR "ERROR: OUT1");
+	return 0;
+OUT2:
+	printk(KERN_ERR "ERROR: OUT2");
+	return 0;
+OUT3:
+	printk(KERN_ERR "ERROR: OUT3");
+	return 0;
+OUT4:
+	printk(KERN_ERR "ERROR: OUT4");
+	return 0;
+OUT5:
+	printk(KERN_ERR "ERROR: OUT5");
+	return 0;
+}
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		i = qsetsize-1;
+d38 1
+a38 1
+			if(i == 0)
+d53 1
+a53 1
+				i--;
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d59 1
+a59 1
+		if(slqset == lsqset)
+@
+
+
+1.22
+log
+@*** empty log message ***
+@
+text
+@a33 1
+				lsqset->data[i] = NULL;
+d36 1
+a36 1
+
+a40 2
+				lsqset->data = NULL;
+
+d43 1
+a45 2
+				slqset->next = NULL;
+
+d48 1
+a48 1
+
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d34 1
+d37 1
+a37 1
+				lsqset->data[i] = NULL;
+d42 1
+a45 1
+				lsqset->data = NULL;
+d48 1
+a52 1
+				slqset->next = NULL;
+@
+
+
+1.20
+log
+@*** empty log message ***
+@
+text
+@d76 1
+a76 1
+/*OUT2:
+d78 1
+a78 1
+	return 0;*/
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d34 2
+a35 2
+		//		if(lsqset->data[i])
+		//			goto OUT2;
+d42 2
+a43 2
+//				if(lsqset->data)
+//					goto OUT3;
+d48 2
+a49 2
+//				if(slqset->next)
+//					goto OUT4;
+d65 2
+a66 2
+//			if(slqset)
+//				goto OUT5;
+d78 1
+a78 1
+	return 0;
+d87 1
+a87 1
+	return 0;*/
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d42 2
+a43 2
+				if(lsqset->data)
+					goto OUT3;
+d48 2
+a49 2
+				if(slqset->next)
+					goto OUT4;
+d65 2
+a66 2
+			if(slqset)
+				goto OUT5;
+d76 3
+a78 3
+//OUT2:
+//	printk(KERN_ERR "ERROR: OUT2");
+//	return 0;
+d87 1
+a87 1
+	return 0;
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		i = 5;
+d34 2
+a35 2
+				if(lsqset->data[i])
+					goto OUT2;
+d76 3
+a78 3
+OUT2:
+	printk(KERN_ERR "ERROR: OUT2");
+	return 0;
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		i = qsetsize-1;
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d34 2
+a37 4
+			else
+			{
+				i--;
+			}
+d41 3
+d45 1
+d47 4
+d54 4
+d63 1
+d65 4
+a68 1
+		slqset = NULL;		
+d74 13
+a86 1
+	printk(KERN_ERR "ERROR: lsqset->next not available");
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		i = noq-1;
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	int l;
+d15 1
+a15 1
+		if(!lsqset->next)
+d21 1
+a21 1
+		while(lsqset->next)
+d28 2
+a29 1
+		for(l=qsetsize-1; l>=0; l--)
+d31 18
+a48 2
+			kfree(lsqset->data[l]);
+			lsqset->data[l] = NULL;
+a49 5
+		kfree(lsqset->data);
+		lsqset->data = NULL;
+	//	kfree(slqset->next);
+	//	slqset->next = NULL;
+	//	lsqset = slqset;
+d51 4
+a54 3
+	//	if(slqset == lsqset)
+	//		kfree(slqset);
+	//	slqset = NULL;		
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d35 3
+a37 3
+		kfree(slqset->next);
+		slqset->next = NULL;
+		lsqset = slqset;
+d39 3
+a41 3
+		if(slqset == lsqset)
+			kfree(slqset);
+		slqset = NULL;		
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d11 1
+a11 1
+/*	lsqset = fdev->firstqs;
+d43 1
+a43 1
+*/	
+d46 1
+a46 1
+/*OUT1:
+d49 1
+a49 1
+*/}
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d11 1
+a11 1
+	lsqset = fdev->firstqs;
+d15 1
+a15 1
+	/*	if(!lsqset->next)
+d21 1
+a21 1
+	*/	while(lsqset->next)
+d38 1
+d43 1
+a43 1
+	
+d46 1
+a46 1
+OUT1:
+d49 1
+a49 1
+}
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d26 1
+a26 1
+				goto: OUT1;
+@
+
+
+1.8
+log
+@some modification to trim.
+@
+text
+@d25 2
+d44 3
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d15 1
+a15 1
+		if(!lsqset->next)
+d21 5
+d33 6
+a38 3
+
+		slqset = lsqset;
+		lsqset = lsqset->next;
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d16 3
+a18 1
+		{	kfree(slqset);
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@a17 2
+//			if(slqset)
+//				goto: OUT;
+a22 2
+//			if(lsqset->data[l])
+//				goto: OUT;
+a25 2
+//		if(lsqset->data)
+//			goto: OUT;
+a28 2
+//		if(!lsqset)
+//			goto: OUT;
+a32 3
+//OUT:
+//	printk(KERN_ERR "ERROR: deallocation failed!");
+//	return 0;
+@
+
+
+1.4
+log
+@function for trimming what is written previously.
+all the memory allocated is being freed using kfree in a backtracking manner.
+@
+text
+@d9 1
+a9 1
+	if(!fdev->firstqs)
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d6 2
+d11 21
+d33 5
+d41 3
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d7 4
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+a4 1
+int dev_trim()
+@

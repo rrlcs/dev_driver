@@ -1,0 +1,802 @@
+head	1.31;
+access;
+symbols;
+locks
+	ravi_raja:1.31; strict;
+comment	@ * @;
+
+
+1.31
+date	2016.07.04.14.41.22;	author ravi_raja;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2016.07.01.04.08.32;	author ravi_raja;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2016.07.01.03.59.44;	author ravi_raja;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2016.07.01.03.43.25;	author ravi_raja;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2016.06.30.17.17.17;	author ravi_raja;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2016.06.30.17.13.40;	author ravi_raja;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2016.06.30.17.09.42;	author ravi_raja;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2016.06.30.17.08.12;	author ravi_raja;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2016.06.30.16.45.01;	author ravi_raja;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2016.06.30.16.37.59;	author ravi_raja;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2016.06.30.14.20.52;	author ravi_raja;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2016.06.30.14.13.19;	author ravi_raja;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2016.06.30.14.03.56;	author ravi_raja;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2016.06.30.13.38.46;	author ravi_raja;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2016.06.30.13.28.22;	author ravi_raja;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2016.06.30.12.54.10;	author ravi_raja;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2016.06.30.12.42.11;	author ravi_raja;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2016.06.30.12.30.07;	author ravi_raja;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.06.30.12.01.49;	author ravi_raja;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.06.30.10.53.24;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.06.30.10.47.49;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.06.30.10.36.09;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.06.30.10.31.08;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.06.30.09.53.40;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.06.30.09.11.45;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.06.30.07.55.21;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.06.30.07.50.24;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.06.30.07.48.06;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.28.07.12.52;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.27.09.33.00;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.27.08.42.31;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@It's a function for creating scull for the device
+memory is allocated to struct Qset and quantums are created
+@
+
+
+1.31
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declaration.h"
+int noi, noq;
+struct Qset * create_scull(int fsize)
+{
+	int l, qsetsize, quantumsize, i, lc1, lc2, lc3;
+	struct Qset * first, *lsqset;
+	noi = 0;
+	lc1 = 0;
+	lc2 = 0;
+	lc3 = 0;
+	first = lsqset = NULL;
+
+	printk(KERN_INFO "BEGIN: %s", __func__);
+
+	printk(KERN_INFO "fsize = %d", fsize);
+	
+	qsetsize = QSETSIZE;
+	quantumsize = QUANTUMSIZE;
+
+	noi = fsize / (qsetsize*quantumsize);
+	if(fsize % (qsetsize*quantumsize))
+		noi++;
+
+	printk(KERN_INFO "noi = %d", noi);	
+	for(l=0; l<noi; l++)
+	{
+		if(l == 0)
+		{
+			first = lsqset = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL);
+
+			if(!first)
+			{
+				printk(KERN_ERR "ERROR: kmalloc(1) failed.\n");
+				goto OUT;
+			}
+		}
+		else
+		{
+			lsqset->next = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL);
+
+			if(!lsqset->next)
+			{
+				printk(KERN_ERR "ERROR: kmalloc(2) failed.\n");
+				goto OUT;
+			}
+
+			lsqset = lsqset->next;
+
+			if(!lsqset)
+			{
+				printk(KERN_ERR "ERROR: kmalloc(3) failed.\n");
+				goto OUT;
+			}
+
+			printk(KERN_INFO "lsqset->next = %p", lsqset);
+		}
+
+		lsqset->next = NULL;
+		first->data = NULL;
+		lc1++;
+	}
+	printk(KERN_INFO "lc1 = %d\n", lc1);
+	lsqset = first;
+	for(l=0; l<noi; l++)
+	{
+		lsqset->data = kmalloc(sizeof(char *)*qsetsize, GFP_KERNEL);
+		if(!lsqset->data)
+		{
+			printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+			goto OUT;
+		}
+		memset(lsqset->data, '\0', sizeof(char *)*qsetsize);
+		lsqset = lsqset->next;
+//		if(!lsqset)
+//			goto OUT;
+
+		lc2++;
+	}
+	printk(KERN_INFO "lc2 = %d\n", lc2);
+
+	noq = fsize / quantumsize;
+	if(fsize % quantumsize)
+		noq++;	
+
+	lsqset = first;
+	l = 0;
+		for(i=0; i<noq; i++)
+		{
+			lsqset->data[l] =kmalloc(sizeof(char)*quantumsize, GFP_KERNEL);
+			if(!lsqset->data[l])
+			{
+				printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+				goto OUT;
+			}
+			if(l == qsetsize - 1)
+			{
+				l = 0;
+				lsqset = lsqset->next;
+				if(!lsqset)
+					goto OUT;
+				//lsqset = first;
+			}
+			else
+				l++;
+		}
+	
+
+	printk(KERN_INFO "lsqset->next = %p", lsqset);
+	printk(KERN_INFO "data_written = %p", (char *)lsqset->data[0]);
+	printk(KERN_INFO "data_written = %p", (char *)lsqset->data[1]);
+	printk(KERN_INFO "data_written = %p", (char *)lsqset->data[2]);
+	printk(KERN_INFO "END: %s", __func__);
+	return first;
+OUT:
+	printk(KERN_ERR "ERROR: scull error\n");
+	return 0;
+}
+
+@
+
+
+1.30
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+int noi;
+d6 1
+a6 1
+	int l, qsetsize, quantumsize, noq, i, lc1, lc2, lc3;
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@d75 2
+a76 2
+		if(!lsqset)
+			goto OUT;
+@
+
+
+1.28
+log
+@*** empty log message ***
+@
+text
+@d30 1
+a30 2
+			lsqset = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL); 
+			first = lsqset;
+d34 1
+a34 1
+				printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+d43 4
+a46 1
+			{	goto OUT;}
+d51 4
+a54 1
+			{	goto OUT;}
+a59 2
+		if(!lsqset->next)
+		{		goto OUT;}
+d67 1
+a67 1
+		lsqset->data = (void **)kmalloc(sizeof(char *)*qsetsize, GFP_KERNEL);
+d90 1
+a90 1
+			lsqset->data[l] =(char *)kmalloc(sizeof(char)*quantumsize, GFP_KERNEL);
+@
+
+
+1.27
+log
+@*** empty log message ***
+@
+text
+@d30 3
+a32 1
+			first = lsqset = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL); 
+d53 2
+a54 4
+		//if(lsqset->next->next)
+		//	lsqset->next->next = NULL;
+		//else
+			lsqset->next = NULL;
+d84 1
+a84 2
+	for(l= 0; l<noi; l++)
+	{
+d87 2
+a88 2
+			lsqset->data[i] =(char *)kmalloc(sizeof(char)*quantumsize, GFP_KERNEL);
+			if(!lsqset->data[i])
+d93 1
+a93 1
+			if(i == qsetsize - 1)
+d95 1
+a95 1
+				i = 0;
+d101 2
+a103 2
+		if(l == 1)	
+			printk(KERN_INFO "lsqset->next = %p", lsqset);
+a104 3
+		lc3++;
+	}
+	printk(KERN_INFO "lc3 = %d\n", lc3);
+d106 1
+a106 1
+			printk(KERN_INFO "lsqset->next = %p", lsqset);
+@
+
+
+1.26
+log
+@*** empty log message ***
+@
+text
+@d42 1
+a42 1
+				goto OUT;
+d47 1
+a47 1
+				goto OUT;
+d56 1
+a56 1
+				goto OUT;
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@d57 1
+a57 1
+		lsqset->data = NULL;
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d44 1
+a44 1
+			lsqset = lsqset->next->next;
+d51 2
+a52 2
+		if(lsqset->next->next)
+			lsqset->next->next = NULL;
+d54 2
+a55 2
+		//	lsqset->next = NULL;
+		if(!lsqset->next->next)
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d44 1
+a44 1
+			lsqset = lsqset->next;
+d53 2
+a54 2
+		else
+			lsqset->next = NULL;
+@
+
+
+1.22
+log
+@*** empty log message ***
+@
+text
+@d51 6
+a56 1
+		lsqset->next->next = NULL;
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d51 1
+a51 1
+		lsqset->next = NULL;
+@
+
+
+1.20
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	int l, qsetsize, quantumsize, noq, i;
+d9 3
+d53 1
+d55 1
+a55 1
+	
+d69 2
+d72 1
+d100 2
+d103 1
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d102 1
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d37 4
+d42 1
+d45 1
+d49 1
+a49 1
+		first->data = NULL;
+d63 2
+d86 2
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d31 1
+d38 2
+d53 1
+d72 1
+d91 2
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@a30 1
+				goto OUT;
+a35 4
+			if(!lsqset->next)
+			{
+				goto OUT;
+			}
+a36 4
+			if(!lsqset)
+			{
+				goto OUT;
+			}
+a85 2
+OUT:
+	return -1;
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d23 1
+a23 1
+/*	for(l=0; l<noi; l++)
+d31 1
+d37 4
+d42 4
+d94 3
+a96 1
+*/	return first;
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d13 2
+d79 1
+a79 1
+*/
+d85 1
+a85 1
+	return first;
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	struct Qset * first, *lsqset, *sec, *third;
+d21 1
+a21 1
+	for(l=0; l<noi; l++)
+d25 1
+a25 1
+			sec = third = first = lsqset = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL); 
+d77 1
+a77 1
+
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d35 1
+d74 2
+d78 1
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d55 1
+a55 1
+	i = 0;	
+d59 1
+a59 2
+		lsqset->data[i] =(char *)kmalloc(sizeof(char)*quantumsize, GFP_KERNEL);
+		if(!lsqset->data[i])
+d61 11
+a71 1
+			printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+a72 8
+		if(i == qsetsize - 1)
+		{
+			i = 0;
+			lsqset = lsqset->next;
+			//lsqset = first;
+		}
+		else
+			i++;
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d43 1
+a43 1
+		lsqset->data = kmalloc(sizeof(char *)*qsetsize, GFP_KERNEL);
+d59 1
+a59 1
+		lsqset->data[i] = kmalloc(sizeof(char)*quantumsize, GFP_KERNEL);
+d74 3
+a76 2
+	printk(KERN_INFO "data_written = %s", (char *)lsqset->data[0]);
+	//printk(KERN_INFO "data_written = %s", (char *)lsqset->data[1]);
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d75 1
+a75 1
+	printk(KERN_INFO "data_written = %s", (char *)lsqset->data[1]);
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	struct Qset * first, *lsqset;
+d25 1
+a25 1
+			first = lsqset = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL); 
+d74 2
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d37 1
+a37 1
+	//	first->data = NULL;
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d37 1
+a37 1
+		lsqset->data = NULL;
+d67 2
+a68 1
+			lsqset = first;
+a70 1
+			lsqset = lsqset->next;
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d19 2
+a20 1
+	
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+
+d6 1
+a6 1
+	int l, qsetsize, quantumsize, noi, noq, i;
+@
+
+
+1.3
+log
+@memory allocated to the number of qset(pointer to quantum) .
+memory allocation to quantum
+noq number of quantum is found is found out using fsize / quantumsize
+@
+text
+@d8 1
+a8 1
+
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 3
+	int l, qsetsize, quantumsize, noi;
+//	struct Dev *ldev;
+//	struct file * filep = NULL;
+a7 1
+//	ldev = filep->private_data;
+a18 6
+
+//	ldev->firstqs = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL);
+//	if(!ldev->firstqs)
+//	{
+//		printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+//	}
+d38 35
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 2
+a8 2
+	struct Dev *ldev;
+	struct file * filep = NULL;
+d10 1
+a10 1
+	ldev = filep->private_data;
+d23 5
+a27 5
+	ldev->firstqs = (struct Qset *)kmalloc(sizeof(struct Qset), GFP_KERNEL);
+	if(!ldev->firstqs)
+	{
+		printk(KERN_ERR "ERROR: kmalloc() failed.\n");
+	}
+@

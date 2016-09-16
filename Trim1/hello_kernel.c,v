@@ -1,0 +1,665 @@
+head	1.29;
+access;
+symbols;
+locks
+	ravi_raja:1.29; strict;
+comment	@ * @;
+
+
+1.29
+date	2016.07.04.13.41.09;	author ravi_raja;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2016.07.04.13.20.15;	author ravi_raja;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2016.07.01.13.01.35;	author ravi_raja;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2016.07.01.12.39.09;	author ravi_raja;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2016.07.01.12.34.32;	author ravi_raja;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2016.07.01.12.32.48;	author ravi_raja;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2016.07.01.12.31.23;	author ravi_raja;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2016.07.01.12.27.37;	author ravi_raja;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2016.07.01.07.28.57;	author ravi_raja;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2016.06.27.08.42.31;	author ravi_raja;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2016.06.25.04.01.44;	author ravi_raja;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2016.06.24.10.28.14;	author ravi_raja;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2016.06.24.08.18.24;	author ravi_raja;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2016.06.24.08.17.12;	author ravi_raja;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2016.06.24.08.14.27;	author ravi_raja;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2016.06.24.08.06.12;	author ravi_raja;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.06.24.07.58.39;	author ravi_raja;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.06.24.07.44.51;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.06.24.07.38.04;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.06.24.07.05.02;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.06.24.06.54.29;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.06.21.06.26.30;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.06.20.08.39.01;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.06.20.07.46.32;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.06.18.11.13.49;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.06.18.08.26.15;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.17.19.49.54;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.17.09.43.38;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.17.07.15.29;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@This inserts the .ko file to device table entry
+It says hello to the kernel using printk and KERN_INFO priority
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declaration.h"
+#include"fops.h"
+
+int MyExpMod()
+{
+        printk(KERN_INFO "BEGIN: %s", __func__);
+        printk(KERN_INFO "END: %s", __func__);
+        return 0;
+}
+
+dev_t dev, newdev;
+int nod, majorno, minorno, ret;
+int quantumsize, qsetsize, devicesize, datasize;
+struct Dev *quant;
+struct cdev c_dev;
+module_param(nod, int, S_IRUGO);
+EXPORT_SYMBOL(MyExpMod);
+
+static int __init func_name(void)
+{
+	int l;
+	printk(KERN_INFO "Hello Kernel , My Driver is getting registered\n");
+
+
+
+	ret = alloc_chrdev_region( &dev, MAJORNO, nod, NAME );
+
+
+	if(ret == -1)
+	{
+		printk(KERN_INFO "ERROR: alloc_chrdev_region FAILED");
+	}
+
+	majorno = MAJOR(dev);
+	minorno = MINOR(dev);
+
+	qsetsize = QSETSIZE;
+	quantumsize = QUANTUMSIZE;
+	devicesize = DEVICESIZE;
+	datasize = DATASIZE;
+
+	printk(KERN_INFO "majorno = %d\n", majorno);
+	printk(KERN_INFO "minorno = %d\n", minorno);
+
+	if(!(quant = (struct Dev *)kmalloc(sizeof(struct Dev)*nod, GFP_KERNEL)))
+	{
+		printk(KERN_INFO "ERROR: kmalloc Failed.");
+	}
+	else
+	{
+		printk(KERN_INFO "Memory allocation Successful!");
+	}
+
+	memset(quant, '\0', sizeof(struct Dev *)*nod);
+	for(l=0; l<nod; l++)
+	{
+		newdev = MKDEV(majorno, l);
+
+		minorno = MINOR(newdev);
+
+		printk(KERN_INFO "minorno = %d\n", minorno);
+
+		cdev_init(&quant[l].c_dev, &fops);
+
+		quant[l].c_dev.owner = THIS_MODULE;
+
+		quant[l].c_dev.ops = &fops;
+		quant[l].qsetsize = qsetsize;
+		quant[l].quantumsize = quantumsize;
+		quant[l].devicesize = devicesize;
+		quant[l].datasize = datasize;
+
+		printk(KERN_INFO "cdev initialization Successful!");
+
+		cdev_add(&quant[l].c_dev, newdev, majorno);
+
+		printk(KERN_INFO "CDEV Added");		
+	}
+	MyExpMod();	
+	return 0;
+}
+module_init(func_name);
+@
+
+
+1.28
+log
+@*** empty log message ***
+@
+text
+@d76 1
+a76 1
+		cdev_add(&quant[l].c_dev, newdev, 260);
+@
+
+
+1.27
+log
+@*** empty log message ***
+@
+text
+@d76 1
+a76 1
+		cdev_add(&quant[l].c_dev, newdev, majorno);
+@
+
+
+1.26
+log
+@*** empty log message ***
+@
+text
+@d64 1
+a64 1
+	//	cdev_init(&quant[l].c_dev, &fops);
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@d68 1
+a68 1
+	//	quant[l].c_dev.ops = &fops;
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d64 1
+a64 1
+		cdev_init(&quant[l].c_dev, &fops);
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d68 1
+a68 1
+		quant[l].c_dev.ops = &fops;
+@
+
+
+1.22
+log
+@*** empty log message ***
+@
+text
+@d68 1
+a68 1
+//		quant[l].c_dev.ops = &fops;
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d68 1
+a68 1
+		quant[l].c_dev.ops = &fops;
+@
+
+
+1.20
+log
+@create_scull is called to allocate memory to the device so that one can perform read write and other file operations
+@
+text
+@d14 1
+d38 4
+a41 2
+//	qsetsize = QSETSIZE;
+//	quantumsize = QUANTUMSIZE;
+d69 4
+@
+
+
+1.19
+log
+@nod number of devices added to the device table
+@
+text
+@d37 2
+d71 1
+a71 1
+		printk(KERN_INFO "CDEV Added");
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d21 1
+d36 1
+a36 1
+	newdev = MKDEV(majorno, minorno);
+d51 14
+a64 3
+		cdev_init(&quant->c_dev, &fops);
+		quant->c_dev.owner = THIS_MODULE;
+		quant->c_dev.ops = &fops;
+d66 3
+a68 1
+		cdev_add(&quant->c_dev, dev, majorno);
+d70 1
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@a20 2
+	int l;
+
+d35 1
+a35 1
+
+d50 3
+a52 11
+	for(l=0; l<nod; l++)
+	{
+		majorno = MAJOR(dev);
+		minorno = MINOR(dev);
+	//	printk(KERN_INFO "majorno = %d\n", majorno);
+		printk(KERN_INFO "minorno = %d\n", minorno);
+	//	newdev = MKDEV(majorno, minorno);
+		cdev_init(&quant[l].c_dev, &fops);
+		quant[l].c_dev.owner = THIS_MODULE;
+		quant[l].c_dev.ops = &fops;
+		
+d54 1
+a54 4
+		
+	//	printk(KERN_INFO "minorno = %d\n", MINOR(newdev));
+	
+		cdev_add(&quant[l].c_dev, dev, majorno);
+a55 1
+	}
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d54 2
+a55 2
+		majorno = MAJOR(quant[l].c_dev.dev);
+		minorno = MINOR(quant[l].c_dev.dev);
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d56 3
+a58 1
+		newdev = MKDEV(majorno, minorno);
+d65 1
+a65 1
+		printk(KERN_INFO "minorno = %d\n", MINOR(newdev));
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+	newdev = MKDEV(MAJORNO, MINORNO);
+d38 1
+d54 3
+d63 1
+a63 1
+		printk(KERN_INFO "minorno = %d\n", MINOR(quant[l].c_dev.dev));
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d35 2
+a36 2
+	majorno = MAJOR(newdev);
+	minorno = MINOR(newdev);
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d25 3
+a27 1
+	ret = alloc_chrdev_region( &dev, MAJORNO, MINORNO, NAME );
+d35 3
+a37 3
+	majorno = MAJOR(dev);
+	minorno = MINOR(dev);
+	newdev = MKDEV(majorno, minorno);
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+	ret = alloc_chrdev_region( &dev, MAJORNO, nod, NAME );
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d57 1
+a57 1
+		printk(KERN_INFO "minorno = %d\n", MINOR(newdev));
+@
+
+
+1.9
+log
+@cdev addded for all number of dedvices nod
+@
+text
+@d57 1
+a57 1
+		printk(KERN_INFO "minorno = %d\n", MINOR(quant[l].c_dev.dev));
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+dev_t dev;
+d21 1
+d35 1
+a35 1
+	dev = MKDEV(majorno, minorno);
+d47 1
+d49 9
+a57 3
+	cdev_init(&quant->c_dev, &fops);
+	quant->c_dev.owner = THIS_MODULE;
+	quant->c_dev.ops = &fops;
+d59 3
+a61 4
+	printk(KERN_INFO "cdev initialization Successful!");
+
+	cdev_add(&quant->c_dev, dev, majorno);
+	printk(KERN_INFO "CDEV Added");
+@
+
+
+1.7
+log
+@logical errors removed and testing
+@
+text
+@d5 7
+d17 1
+d55 1
+a55 1
+	
+@
+
+
+1.6
+log
+@module_param usewd for passing command line parameters
+@
+text
+@d18 1
+@
+
+
+1.5
+log
+@struct cdev added to the Device Table Entry
+@
+text
+@d8 2
+a9 1
+struct cdev *c_dev;
+d15 2
+a16 1
+	ret = alloc_chrdev_region( &dev, MAJORNO, NOD, NAME );
+d25 1
+a25 1
+
+d29 1
+a29 1
+	if(!(quant = (struct Dev *)kmalloc(sizeof(struct Dev)*NOD, GFP_KERNEL)))
+d37 5
+a41 2
+	memset(quant, '\0', sizeof(struct Dev *)*NOD);
+	cdev_init(c_dev, &fops);
+d44 2
+a45 8
+	if(!(cdev_add(c_dev, dev, MAJORNO)))
+	{
+		printk(KERN_INFO "ERROR: cdev_add Failed");
+	}
+	else
+	{
+		printk(KERN_INFO "CDEV Added");
+	}
+@
+
+
+1.4
+log
+@Memory is Allocated to strcut Dev (user defined data structure) usnig kmalloc
+@
+text
+@d8 1
+d27 1
+a27 1
+	if(!(quant = (struct Dev *)kmalloc(sizeof(struct Dev)*NOD, GFP_KERNEL)));
+d31 4
+d36 12
+@
+
+
+1.3
+log
+@Allocate space/map memory on device using malloc.
+@
+text
+@d3 1
+d26 1
+a26 1
+	if((quant = kmalloc(sizeof(strcut Dev), GFP_KERNEL)));
+d28 1
+a28 1
+		printk(KERN_INFO "kmalloc successful");
+d30 1
+@
+
+
+1.2
+log
+@alloc_chrdev_region called for registering the driver returns 0 for success
+arguments are dev_t * type variable for storing the major no and minor no as 12 bits + 20 bits
+majorno and minorno are printed in dmesg using kernel macros MAJOR and MINOR
+@
+text
+@d3 1
+d6 2
+d12 2
+a13 1
+	ret = alloc_chrdev_region( &dev, MAJORNO, nod, NAME );
+d18 1
+d21 1
+d24 5
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 3
+d7 11
+a17 1
+	printk(KERN_INFO "hello kernel , we come\n");
+@

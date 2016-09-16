@@ -1,0 +1,173 @@
+head	1.8;
+access;
+symbols;
+locks
+	ravi_raja:1.8; strict;
+comment	@ * @;
+
+
+1.8
+date	2016.06.20.07.46.32;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.06.18.11.13.49;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.06.18.08.26.15;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.06.17.10.58.33;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.06.17.10.56.48;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.17.10.23.07;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.17.09.43.38;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.17.07.15.29;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@This is a cleanup function that removes the device from device table entry
+removes inserted kernel object file using rmmod
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declaration.h"
+//#include"fops.h"
+
+static void __exit func_name(void)
+{
+	printk(KERN_INFO "Bye kernel , We will back\n");
+
+	cdev_del(&quant->c_dev);
+	kfree(quant);
+/*	if(!(kfree(quant)))
+	{
+		printk(KERN_INFO "ERROR: Deallocation of memory Failed.\n");
+	}
+	else
+	{
+		printk(KERN_INFO "Memory successfully Deallocated");
+	}
+*/
+	unregister_chrdev_region(dev, NOD);
+};
+module_exit(func_name);
+@
+
+
+1.7
+log
+@Device Table Entry Rempoved using cdev_del
+@
+text
+@d9 1
+a9 1
+	cdev_del(c_dev);
+@
+
+
+1.6
+log
+@Allocated memory to struct Dev is freed using kfree
+@
+text
+@d3 2
+d8 2
+a9 2
+	unregister_chrdev_region(dev, NOD);
+	
+d11 2
+a12 1
+/*	{
+d14 7
+a20 1
+	}*/
+@
+
+
+1.5
+log
+@first arg changed to majorno
+@
+text
+@d6 7
+a12 2
+	unregister_chrdev_region(majorno, nod);
+}
+@
+
+
+1.4
+log
+@majorno replaced by nod
+@
+text
+@d6 1
+a6 1
+	unregister_chrdev_region(dev, nod);
+@
+
+
+1.3
+log
+@Redeclaration error removed.
+@
+text
+@a2 2
+//dev_t dev;
+//int majorno;
+d5 2
+a6 2
+	printk(KERN_INFO "bye kernel , we will back\n");
+	unregister_chrdev_region(dev, majorno);
+@
+
+
+1.2
+log
+@unregister_chrdev_region called to unregister the driver
+@
+text
+@d3 2
+a4 2
+dev_t dev;
+int majorno;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 3
+d8 1
+@

@@ -1,0 +1,108 @@
+head	1.5;
+access;
+symbols;
+locks
+	ravi_raja:1.5; strict;
+comment	@ * @;
+
+
+1.5
+date	2016.06.20.07.51.46;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.06.18.11.22.45;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.18.08.27.50;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.17.19.51.01;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.17.09.49.04;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@extern dev_t dev decalared
+extern int majorno, minorno, nod declared
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@extern dev_t dev;
+extern int nod, majorno, minorno;
+
+struct Qset
+{
+	struct Qset *next;
+	void ** data;
+};
+
+struct Dev
+{
+	struct Qset *first;
+	struct cdev c_dev;
+};
+//extern struct cdev c_dev;
+extern struct Dev *quant;
+ 
+@
+
+
+1.4
+log
+@extern struct cdev *c_dev declared.
+@
+text
+@d13 1
+a13 1
+	struct cdev *c_dev;
+d15 1
+a15 1
+extern struct cdev *c_dev;
+@
+
+
+1.3
+log
+@struct Dev and struct Qset declared
+@
+text
+@d15 1
+@
+
+
+1.2
+log
+@Free allocate memory using kfree
+@
+text
+@d9 1
+d13 1
+a13 1
+	struct cdev;
+d16 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 12
+@

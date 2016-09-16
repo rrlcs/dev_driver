@@ -1,0 +1,2083 @@
+head	1.96;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.96
+date	2016.07.19.05.16.36;	author ravi_raja;	state Exp;
+branches;
+next	1.95;
+
+1.95
+date	2016.07.11.19.02.06;	author ravi_raja;	state Exp;
+branches;
+next	1.94;
+
+1.94
+date	2016.07.11.18.36.49;	author ravi_raja;	state Exp;
+branches;
+next	1.93;
+
+1.93
+date	2016.07.10.13.15.46;	author ravi_raja;	state Exp;
+branches;
+next	1.92;
+
+1.92
+date	2016.07.10.13.15.10;	author ravi_raja;	state Exp;
+branches;
+next	1.91;
+
+1.91
+date	2016.07.09.05.10.42;	author ravi_raja;	state Exp;
+branches;
+next	1.90;
+
+1.90
+date	2016.07.08.11.17.38;	author ravi_raja;	state Exp;
+branches;
+next	1.89;
+
+1.89
+date	2016.07.08.07.19.35;	author ravi_raja;	state Exp;
+branches;
+next	1.88;
+
+1.88
+date	2016.07.08.05.02.21;	author ravi_raja;	state Exp;
+branches;
+next	1.87;
+
+1.87
+date	2016.07.08.04.51.02;	author ravi_raja;	state Exp;
+branches;
+next	1.86;
+
+1.86
+date	2016.07.08.04.32.28;	author ravi_raja;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2016.07.08.03.51.40;	author ravi_raja;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2016.07.08.03.35.12;	author ravi_raja;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2016.07.08.03.06.10;	author ravi_raja;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2016.07.05.17.33.42;	author ravi_raja;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2016.07.05.17.32.30;	author ravi_raja;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2016.07.05.17.04.01;	author ravi_raja;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2016.07.05.13.53.05;	author ravi_raja;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2016.07.05.13.32.34;	author ravi_raja;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2016.07.05.13.17.47;	author ravi_raja;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2016.07.05.13.17.09;	author ravi_raja;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2016.07.05.13.02.39;	author ravi_raja;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2016.07.05.12.49.21;	author ravi_raja;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2016.07.05.12.01.07;	author ravi_raja;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2016.07.05.11.55.59;	author ravi_raja;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2016.07.05.11.52.45;	author ravi_raja;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2016.07.05.11.34.09;	author ravi_raja;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2016.07.05.11.23.49;	author ravi_raja;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2016.07.05.11.23.04;	author ravi_raja;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2016.07.05.11.16.30;	author ravi_raja;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2016.07.05.11.14.36;	author ravi_raja;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2016.07.05.11.01.35;	author ravi_raja;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2016.07.05.10.47.59;	author ravi_raja;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2016.07.05.10.36.20;	author ravi_raja;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2016.07.05.10.33.23;	author ravi_raja;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2016.07.05.10.32.52;	author ravi_raja;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2016.07.05.10.32.03;	author ravi_raja;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2016.07.05.10.20.20;	author ravi_raja;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2016.07.05.10.14.16;	author ravi_raja;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2016.07.05.10.08.05;	author ravi_raja;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2016.07.05.10.04.13;	author ravi_raja;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2016.07.05.08.43.17;	author ravi_raja;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2016.07.05.07.59.25;	author ravi_raja;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2016.07.05.07.54.08;	author ravi_raja;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2016.07.05.07.49.52;	author ravi_raja;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2016.07.05.07.44.28;	author ravi_raja;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2016.07.05.07.37.56;	author ravi_raja;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2016.07.05.07.23.02;	author ravi_raja;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2016.07.05.07.18.49;	author ravi_raja;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2016.07.05.07.17.23;	author ravi_raja;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2016.07.05.07.15.57;	author ravi_raja;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2016.07.05.05.02.51;	author ravi_raja;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2016.07.05.04.58.26;	author ravi_raja;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2016.07.05.04.52.26;	author ravi_raja;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2016.07.05.04.26.18;	author ravi_raja;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2016.07.05.04.19.19;	author ravi_raja;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2016.07.05.04.05.51;	author ravi_raja;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2016.07.05.03.57.22;	author ravi_raja;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2016.07.05.03.44.46;	author ravi_raja;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2016.07.05.03.42.34;	author ravi_raja;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2016.07.05.03.40.44;	author ravi_raja;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2016.07.05.03.30.49;	author ravi_raja;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2016.07.05.03.06.42;	author ravi_raja;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2016.07.04.18.27.30;	author ravi_raja;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2016.07.04.18.14.22;	author ravi_raja;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2016.07.04.18.09.26;	author ravi_raja;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2016.07.04.18.05.46;	author ravi_raja;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2016.07.04.18.02.39;	author ravi_raja;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2016.07.04.18.02.02;	author ravi_raja;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2016.07.04.17.10.14;	author ravi_raja;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2016.07.04.17.08.26;	author ravi_raja;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2016.07.04.16.38.48;	author ravi_raja;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2016.07.04.16.33.38;	author ravi_raja;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2016.07.04.16.20.46;	author ravi_raja;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2016.07.04.16.15.39;	author ravi_raja;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2016.07.04.16.11.59;	author ravi_raja;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2016.07.04.16.08.11;	author ravi_raja;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2016.07.04.16.02.33;	author ravi_raja;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2016.07.04.16.00.51;	author ravi_raja;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2016.07.04.15.54.11;	author ravi_raja;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2016.07.04.15.45.45;	author ravi_raja;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2016.07.04.14.51.49;	author ravi_raja;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2016.07.04.14.41.22;	author ravi_raja;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.07.04.13.41.09;	author ravi_raja;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.07.04.13.20.15;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.07.04.11.28.21;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.07.04.10.52.44;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.07.04.10.51.08;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.07.04.10.27.31;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.07.04.08.40.49;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.07.04.08.20.24;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.07.04.07.40.59;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.07.04.07.32.15;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.07.01.12.23.49;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.24.14.23.08;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.24.14.06.44;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@it flushes the file opened in write only mode.
+@
+
+
+1.96
+log
+@atomic var fdev->datasize set to 0
+@
+text
+@#include"header.h"
+#include"declaration.h"
+
+int dev_trim(struct Dev *fdev)
+{
+	struct Qset * lsqset, *slqset;
+	int l;
+	printk(KERN_INFO "BEGIN: %s", __func__);
+	if(!fdev)
+		printk(KERN_ERR "ERROR: Device Not Found");
+	slqset =lsqset= NULL;
+//	if(down_interruptible(&fdev->sem))
+//		return -ERESTARTSYS;
+
+	while(lsqset)
+	{
+		slqset = lsqset = NULL;
+		lsqset = fdev->firstqs;
+		while(lsqset->next)
+		{
+			slqset = lsqset;
+			lsqset = lsqset->next;
+		}
+		if(lsqset)
+		{
+			for(l=qsetsize-1; l>=0; l--)
+			{
+				if(lsqset->data[l]!=NULL)
+				{
+					kfree(lsqset->data[l]);
+					lsqset->data[l] = NULL;
+				}
+			}
+			
+			kfree(lsqset->data);
+			lsqset->data = NULL;
+			kfree(lsqset);
+			lsqset = NULL;
+		}
+		if(slqset)
+		{
+			slqset->next = NULL;
+			lsqset = slqset;
+		}
+		else if(!slqset)
+		{
+			fdev->firstqs = NULL;
+		}
+	}
+
+//	up(&fdev->sem);
+
+	atomic_set(&fdev->datasize, 0);		
+	printk(KERN_INFO "END: %s", __func__);
+	return 0;
+}
+@
+
+
+1.95
+log
+@*** empty log message ***
+@
+text
+@d53 1
+a53 1
+	fdev->datasize = 0;		
+@
+
+
+1.94
+log
+@Implementing semaphores synchronization technique
+@
+text
+@d12 2
+a13 2
+	if(down_interruptible(&fdev->sem))
+		return -ERESTARTSYS;
+d51 1
+a51 1
+	up(&fdev->sem);
+@
+
+
+1.93
+log
+@*** empty log message ***
+@
+text
+@d12 3
+d50 2
+@
+
+
+1.92
+log
+@*** empty log message ***
+@
+text
+@d48 1
+a48 1
+	ldev->datasize = 0;		
+@
+
+
+1.91
+log
+@trimming done successfully. kfreed all the allocated memory to the device
+@
+text
+@d47 2
+a48 1
+	
+@
+
+
+1.90
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 2
+//	struct Qset * lsqset, *slqset;
+//	int l, i, lc;
+d9 1
+a9 1
+/*	if(!fdev)
+a11 2
+	lsqset = fdev->firstqs;
+	slqset = fdev->firstqs;
+d14 10
+a23 3
+			l = 0;
+			lc = 0;
+			for(i=0; i<noq; i++)
+d25 1
+a25 11
+
+				printk(KERN_INFO "INFO: %p", lsqset->data[l]);
+				kfree(lsqset->data[l]);
+				lsqset->data[l] = NULL;
+				printk(KERN_INFO "INFO: %s", (char *)lsqset->data[l]);
+				lc++;	
+				printk(KERN_INFO "INFO:lc =  %d", lc);
+				if(lsqset->data[l])
+					goto OUT1;
+
+				if(l == qsetsize-1)
+d27 2
+a28 14
+					kfree(lsqset->data);
+					lsqset->data = NULL;
+					if(lsqset->data)
+						goto OUT2;
+					l = 0;
+					if(slqset && slqset->next)
+					{
+						lsqset = slqset;
+						lsqset = lsqset->next;
+						if(lsqset)
+							goto OUT3;
+					}
+					else
+						goto OUT4;
+a29 5
+				else
+					l++;
+						
+
+				printk(KERN_INFO "NOQDEL: %d", l);
+d31 15
+d47 1
+a47 1
+*/	
+a49 12
+/*OUT1:
+	printk(KERN_ERR "ERROR: OUT1");
+	return 0;
+OUT2:
+	printk(KERN_ERR "ERROR: OUT2");
+	return 0;
+OUT3:
+	printk(KERN_ERR "ERROR: OUT3");
+	return 0;
+OUT4:
+	printk(KERN_ERR "ERROR: OUT5");
+	return 0;*/
+@
+
+
+1.89
+log
+@Reading data from scull and updating the datasize
+@
+text
+@d6 2
+a7 2
+	struct Qset * lsqset, *slqset;
+	int l, i, lc;
+@
+
+
+1.88
+log
+@*** empty log message ***
+@
+text
+@d9 1
+a9 1
+	if(!fdev)
+d54 1
+a54 1
+	
+d57 1
+a57 1
+OUT1:
+d68 1
+a68 1
+	return 0;
+@
+
+
+1.87
+log
+@*** empty log message ***
+@
+text
+@d12 2
+a13 2
+	lsqset = fdev->firstqs->next;
+	slqset = fdev->firstqs->next;
+d37 1
+a37 1
+					if(slqset->next)
+@
+
+
+1.86
+log
+@*** empty log message ***
+@
+text
+@d12 2
+a13 2
+	lsqset = fdev->firstqs;
+	slqset = fdev->firstqs;
+@
+
+
+1.85
+log
+@*** empty log message ***
+@
+text
+@d41 1
+a41 1
+						if(!lsqset)
+@
+
+
+1.84
+log
+@*** empty log message ***
+@
+text
+@d40 3
+a42 1
+						lsqset = slqset->next;
+d50 1
+a50 2
+				if(!lsqset)
+					goto OUT3;
+@
+
+
+1.83
+log
+@*** empty log message ***
+@
+text
+@a13 1
+//	first = lsqset;
+a15 9
+	/*	if(!lsqset->next)
+		{
+			printk(KERN_INFO "INFO: kfree successful");
+			kfree(slqset);
+			slqset = NULL;
+		}
+	*///	while(lsqset->next)
+	//	{
+		//	slqset = lsqset;
+d40 1
+a40 3
+						lsqset = lsqset->next;
+
+
+a51 2
+	//	}
+
+@
+
+
+1.82
+log
+@*** empty log message ***
+@
+text
+@a46 1
+					lsqset = slqset;
+d49 1
+d51 2
+a52 3
+						//lsqset = slqset;
+						if(!lsqset)
+							goto OUT3;
+d59 3
+@
+
+
+1.81
+log
+@*** empty log message ***
+@
+text
+@d52 1
+a52 1
+						if(lsqset)
+@
+
+
+1.80
+log
+@*** empty log message ***
+@
+text
+@d47 1
+a47 1
+					//lsqset = slqset;
+a49 1
+						lsqset = slqset;
+d51 1
+@
+
+
+1.79
+log
+@*** empty log message ***
+@
+text
+@d53 1
+a53 1
+							goto OUT5;
+d56 1
+a56 1
+						goto OUT3;
+d77 1
+a77 1
+OUT5:
+@
+
+
+1.78
+log
+@*** empty log message ***
+@
+text
+@d52 1
+a52 1
+						if(!lsqset)
+@
+
+
+1.77
+log
+@*** empty log message ***
+@
+text
+@d15 1
+a15 1
+	while(fdev->firstqs)
+@
+
+
+1.76
+log
+@..
+@
+text
+@a76 3
+OUT4:
+	printk(KERN_ERR "ERROR: OUT4");
+	return 0;
+@
+
+
+1.75
+log
+@*** empty log message ***
+@
+text
+@d51 1
+a51 1
+						lsqset = slqset->next;
+a59 3
+				
+				if(!lsqset)
+					goto OUT4;
+@
+
+
+1.74
+log
+@*** empty log message ***
+@
+text
+@d51 1
+a51 1
+						lsqset = lsqset->next;
+d60 3
+d79 3
+@
+
+
+1.73
+log
+@*** empty log message ***
+@
+text
+@d50 1
+a50 1
+						slqset = lsqset;
+d52 2
+d77 1
+a77 1
+/*OUT5:
+d79 1
+a79 1
+	return 0;*/
+@
+
+
+1.72
+log
+@*** empty log message ***
+@
+text
+@d15 1
+a15 1
+	while(lsqset)
+@
+
+
+1.71
+log
+@*** empty log message ***
+@
+text
+@a54 2
+					if(!lsqset)
+						goto OUT4;
+a73 3
+	return 0;
+OUT4:
+	printk(KERN_ERR "ERROR: OUT4");
+@
+
+
+1.70
+log
+@*** empty log message ***
+@
+text
+@d11 1
+a11 1
+	slqset = NULL;
+d13 1
+d47 2
+a48 2
+					lsqset = slqset;
+					if(lsqset->next)
+@
+
+
+1.69
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	struct Qset * lsqset, *slqset, *first;
+d11 1
+a11 1
+
+d13 1
+a13 1
+	first = lsqset;
+@
+
+
+1.68
+log
+@*** empty log message ***
+@
+text
+@d48 1
+d51 1
+@
+
+
+1.67
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	struct Qset * lsqset, *slqset;
+d12 2
+a13 3
+	slqset = lsqset = NULL;	
+	slqset = lsqset = fdev->firstqs;
+
+d48 1
+@
+
+
+1.66
+log
+@*** empty log message ***
+@
+text
+@d13 1
+a13 1
+	lsqset = fdev->firstqs;
+@
+
+
+1.65
+log
+@*** empty log message ***
+@
+text
+@d47 1
+@
+
+
+1.64
+log
+@*** empty log message ***
+@
+text
+@a6 1
+	struct file* fileop;
+d12 1
+a12 2
+	fileop = NULL;
+	fdev = fileop->private_data;
+d14 1
+a14 1
+	slqset = lsqset;	
+@
+
+
+1.63
+log
+@*** empty log message ***
+@
+text
+@d12 3
+a14 1
+//	fdev = fileop->private_data;
+d49 2
+a50 2
+					if(slqset->next)
+						lsqset = slqset->next;
+@
+
+
+1.62
+log
+@*** empty log message ***
+@
+text
+@d47 2
+a48 2
+					if(lsqset->next)
+						lsqset = lsqset->next;
+@
+
+
+1.61
+log
+@*** empty log message ***
+@
+text
+@d73 1
+a73 1
+/*OUT4:
+d76 1
+a76 1
+OUT5:
+@
+
+
+1.60
+log
+@*** empty log message ***
+@
+text
+@d45 1
+a45 1
+						goto OUT2
+@
+
+
+1.59
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+	fdev = fileop->private_data;
+d25 1
+a25 1
+			slqset = lsqset;
+d42 4
+d50 1
+a50 1
+						goto OUT2;
+d52 1
+a52 1
+						goto OUT3;
+@
+
+
+1.58
+log
+@*** empty log message ***
+@
+text
+@d7 1
+d12 1
+@
+
+
+1.57
+log
+@*** empty log message ***
+@
+text
+@d43 2
+d46 1
+a46 1
+						goto OUT2;
+d64 1
+a64 1
+/*OUT3:
+d67 1
+a67 1
+OUT4:
+@
+
+
+1.56
+log
+@*** empty log message ***
+@
+text
+@d41 2
+a42 1
+					lsqset = lsqset->next;
+@
+
+
+1.55
+log
+@*** empty log message ***
+@
+text
+@d21 2
+a22 2
+	*/	while(lsqset->next)
+		{
+d49 1
+a49 1
+		}
+@
+
+
+1.54
+log
+@*** empty log message ***
+@
+text
+@d35 1
+a35 1
+				if(lsqset->data)
+@
+
+
+1.53
+log
+@*** empty log message ***
+@
+text
+@d35 1
+a35 1
+				if(lsqset->data[l])
+@
+
+
+1.52
+log
+@*** empty log message ***
+@
+text
+@a30 1
+
+d35 1
+a35 1
+				if(lsqset->data[l]!=NULL)
+@
+
+
+1.51
+log
+@*** empty log message ***
+@
+text
+@d31 3
+a35 2
+				lsqset->data[l] = NULL;
+				printk(KERN_INFO "INFO: %s", (char *)lsqset->data[l]);
+@
+
+
+1.50
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	int l, i;
+d25 1
+d30 3
+a32 1
+				kfree(lsqset->data[l]);	
+d34 1
+a34 1
+				printk(KERN_INFO "INFO: %s", (char *)lsqset->data[1]);
+@
+
+
+1.49
+log
+@*** empty log message ***
+@
+text
+@d31 3
+a33 3
+				printk(KERN_INFO "INFO: %s", (char *)lsqset->data[l]);
+//				if(lsqset->data[l]!=NULL)
+//					goto OUT1;
+d52 3
+a54 3
+//OUT1:
+//	printk(KERN_ERR "ERROR: OUT1");
+//	return 0;
+@
+
+
+1.48
+log
+@*** empty log message ***
+@
+text
+@d28 6
+a33 7
+					printk(KERN_INFO "INFO: %p", lsqset->data[l]);
+					kfree(lsqset->data[l]);	
+					lsqset->data[l] = NULL;
+					printk(KERN_INFO "INFO: %s", (char *)lsqset->data[l]);
+					if(lsqset->data[l]!=NULL)
+						goto OUT1;
+
+d52 3
+a54 3
+OUT1:
+	printk(KERN_ERR "ERROR: OUT1");
+	return 0;
+@
+
+
+1.47
+log
+@*** empty log message ***
+@
+text
+@d32 1
+a32 1
+					if(lsqset->data)
+@
+
+
+1.46
+log
+@*** empty log message ***
+@
+text
+@d30 1
+d34 1
+a34 1
+					lsqset->data[l] = NULL;
+@
+
+
+1.45
+log
+@*** empty log message ***
+@
+text
+@d30 1
+a30 1
+					printk(KERN_INFO "INFO: %d", sizeof(lsqset->data[l]));
+@
+
+
+1.44
+log
+@*** empty log message ***
+@
+text
+@d30 2
+a31 1
+					if(sizeof(lsqset->data[l]) == 0)
+@
+
+
+1.43
+log
+@*** empty log message ***
+@
+text
+@a27 2
+				if(lsqset->data[l])
+				{
+a32 5
+
+				}
+				else
+					if(sizeof(lsqset->data[l]) == 0)
+						goto OUT1;
+@
+
+
+1.42
+log
+@*** empty log message ***
+@
+text
+@d32 4
+a35 3
+				//	lsqset->data[l] = NULL;
+				//	if(lsqset->data[l])
+				//		goto OUT1;
+d38 2
+a39 1
+					goto OUT1;
+@
+
+
+1.41
+log
+@*** empty log message ***
+@
+text
+@d13 2
+a14 2
+//	while(lsqset)
+//	{
+d52 1
+a52 1
+//	}
+@
+
+
+1.40
+log
+@*** empty log message ***
+@
+text
+@d13 2
+a14 2
+	while(lsqset)
+	{
+d23 1
+a23 1
+		//	slqset = lsqset;
+d32 3
+a34 3
+					lsqset->data[l] = NULL;
+					if(lsqset->data[l])
+						goto OUT1;
+d36 2
+d52 1
+a52 1
+	}
+@
+
+
+1.39
+log
+@*** empty log message ***
+@
+text
+@d33 2
+a35 2
+				if(lsqset->data[l])
+					goto OUT1;
+@
+
+
+1.38
+log
+@*** empty log message ***
+@
+text
+@d23 1
+a23 1
+			slqset = lsqset;
+d34 2
+a35 2
+	//			if(lsqset->data)
+	//				goto OUT1;
+d54 3
+a56 3
+//OUT1:
+//	printk(KERN_ERR "ERROR: OUT1");
+//	return 0;
+@
+
+
+1.37
+log
+@*** empty log message ***
+@
+text
+@d34 2
+a35 2
+				if(lsqset->data)
+					goto OUT1;
+d54 3
+a56 3
+OUT1:
+	printk(KERN_ERR "ERROR: OUT1");
+	return 0;
+@
+
+
+1.36
+log
+@*** empty log message ***
+@
+text
+@d27 1
+a27 1
+				printk(KERN_INFO "INFO: %p", lsqset->data[l]);
+d30 1
+@
+
+
+1.35
+log
+@*** empty log message ***
+@
+text
+@d28 6
+a33 3
+				kfree(lsqset->data[l]);	
+				lsqset->data[l] = NULL;
+				if(!lsqset->data)
+@
+
+
+1.34
+log
+@*** empty log message ***
+@
+text
+@d29 2
+a30 2
+				lsqset->data = NULL;
+				if(lsqset->data)
+@
+
+
+1.33
+log
+@*** empty log message ***
+@
+text
+@a27 1
+				lsqset->data[l] = NULL;
+d29 2
+a30 1
+				if(lsqset->data[l])
+@
+
+
+1.32
+log
+@*** empty log message ***
+@
+text
+@d27 2
+d32 1
+a32 1
+				lsqset->data[l] = NULL;
+@
+
+
+1.31
+log
+@*** empty log message ***
+@
+text
+@a27 1
+				lsqset->data[l] = NULL;
+d30 1
+@
+
+
+1.30
+log
+@*** empty log message ***
+@
+text
+@d28 2
+a29 1
+				if(lsqset->data)
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@d39 1
+@
+
+
+1.28
+log
+@*** empty log message ***
+@
+text
+@d46 1
+a46 1
+/*OUT1:
+d48 1
+a48 1
+	return 0;*/
+@
+
+
+1.27
+log
+@*** empty log message ***
+@
+text
+@d28 2
+a29 2
+//				if(lsqset->data)
+//					goto OUT1;
+d37 2
+@
+
+
+1.26
+log
+@*** empty log message ***
+@
+text
+@d28 2
+a29 2
+				if(lsqset->data)
+					goto OUT1;
+d44 1
+a44 1
+OUT1:
+d46 1
+a46 1
+	return 0;
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@d24 2
+a25 15
+			lsqset = lsqset->next;
+			if(!lsqset)
+				goto OUT1;
+		}
+		i = 0;
+		for(l=noq-1; l>=0; l--)
+		{
+			if(lsqset->data[i])
+			{
+				kfree(lsqset->data[i]);
+				if(lsqset->data[i])
+					goto OUT2;
+				lsqset->data[i] = NULL;
+			}
+			if(i == qsetsize-1)
+d27 1
+a27 1
+				kfree(lsqset->data);
+d29 8
+a36 8
+					goto OUT3;
+				lsqset->data = NULL;
+
+				kfree(slqset->next);
+				if(slqset->next)
+					goto OUT4;
+				slqset->next = NULL;
+				lsqset = slqset;
+a37 5
+			else
+			{
+				i++;
+			}
+			
+a39 8
+
+		if(!slqset->next)
+		{
+			kfree(slqset);
+			if(slqset)
+				goto OUT5;
+			slqset = NULL;		
+		}
+d50 1
+a50 1
+OUT3:
+d58 1
+a58 1
+	return 0;
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		i = qsetsize-1;
+d38 1
+a38 1
+			if(i == 0)
+d53 1
+a53 1
+				i--;
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d59 1
+a59 1
+		if(slqset == lsqset)
+@
+
+
+1.22
+log
+@*** empty log message ***
+@
+text
+@a33 1
+				lsqset->data[i] = NULL;
+d36 1
+a36 1
+
+a40 2
+				lsqset->data = NULL;
+
+d43 1
+a45 2
+				slqset->next = NULL;
+
+d48 1
+a48 1
+
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d34 1
+d37 1
+a37 1
+				lsqset->data[i] = NULL;
+d42 1
+a45 1
+				lsqset->data = NULL;
+d48 1
+a52 1
+				slqset->next = NULL;
+@
+
+
+1.20
+log
+@*** empty log message ***
+@
+text
+@d76 1
+a76 1
+/*OUT2:
+d78 1
+a78 1
+	return 0;*/
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@d34 2
+a35 2
+		//		if(lsqset->data[i])
+		//			goto OUT2;
+d42 2
+a43 2
+//				if(lsqset->data)
+//					goto OUT3;
+d48 2
+a49 2
+//				if(slqset->next)
+//					goto OUT4;
+d65 2
+a66 2
+//			if(slqset)
+//				goto OUT5;
+d78 1
+a78 1
+	return 0;
+d87 1
+a87 1
+	return 0;*/
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d42 2
+a43 2
+				if(lsqset->data)
+					goto OUT3;
+d48 2
+a49 2
+				if(slqset->next)
+					goto OUT4;
+d65 2
+a66 2
+			if(slqset)
+				goto OUT5;
+d76 3
+a78 3
+//OUT2:
+//	printk(KERN_ERR "ERROR: OUT2");
+//	return 0;
+d87 1
+a87 1
+	return 0;
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		i = 5;
+d34 2
+a35 2
+				if(lsqset->data[i])
+					goto OUT2;
+d76 3
+a78 3
+OUT2:
+	printk(KERN_ERR "ERROR: OUT2");
+	return 0;
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		i = qsetsize-1;
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d34 2
+a37 4
+			else
+			{
+				i--;
+			}
+d41 3
+d45 1
+d47 4
+d54 4
+d63 1
+d65 4
+a68 1
+		slqset = NULL;		
+d74 13
+a86 1
+	printk(KERN_ERR "ERROR: lsqset->next not available");
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		i = noq-1;
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	int l;
+d15 1
+a15 1
+		if(!lsqset->next)
+d21 1
+a21 1
+		while(lsqset->next)
+d28 2
+a29 1
+		for(l=qsetsize-1; l>=0; l--)
+d31 18
+a48 2
+			kfree(lsqset->data[l]);
+			lsqset->data[l] = NULL;
+a49 5
+		kfree(lsqset->data);
+		lsqset->data = NULL;
+	//	kfree(slqset->next);
+	//	slqset->next = NULL;
+	//	lsqset = slqset;
+d51 4
+a54 3
+	//	if(slqset == lsqset)
+	//		kfree(slqset);
+	//	slqset = NULL;		
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d35 3
+a37 3
+		kfree(slqset->next);
+		slqset->next = NULL;
+		lsqset = slqset;
+d39 3
+a41 3
+		if(slqset == lsqset)
+			kfree(slqset);
+		slqset = NULL;		
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d11 1
+a11 1
+/*	lsqset = fdev->firstqs;
+d43 1
+a43 1
+*/	
+d46 1
+a46 1
+/*OUT1:
+d49 1
+a49 1
+*/}
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d11 1
+a11 1
+	lsqset = fdev->firstqs;
+d15 1
+a15 1
+	/*	if(!lsqset->next)
+d21 1
+a21 1
+	*/	while(lsqset->next)
+d38 1
+d43 1
+a43 1
+	
+d46 1
+a46 1
+OUT1:
+d49 1
+a49 1
+}
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d26 1
+a26 1
+				goto: OUT1;
+@
+
+
+1.8
+log
+@some modification to trim.
+@
+text
+@d25 2
+d44 3
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d15 1
+a15 1
+		if(!lsqset->next)
+d21 5
+d33 6
+a38 3
+
+		slqset = lsqset;
+		lsqset = lsqset->next;
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d16 3
+a18 1
+		{	kfree(slqset);
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@a17 2
+//			if(slqset)
+//				goto: OUT;
+a22 2
+//			if(lsqset->data[l])
+//				goto: OUT;
+a25 2
+//		if(lsqset->data)
+//			goto: OUT;
+a28 2
+//		if(!lsqset)
+//			goto: OUT;
+a32 3
+//OUT:
+//	printk(KERN_ERR "ERROR: deallocation failed!");
+//	return 0;
+@
+
+
+1.4
+log
+@function for trimming what is written previously.
+all the memory allocated is being freed using kfree in a backtracking manner.
+@
+text
+@d9 1
+a9 1
+	if(!fdev->firstqs)
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d6 2
+d11 21
+d33 5
+d41 3
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d7 4
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+a4 1
+int dev_trim()
+@

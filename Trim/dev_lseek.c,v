@@ -1,0 +1,34 @@
+head	1.1;
+access;
+symbols;
+locks
+	ravi_raja:1.1; strict;
+comment	@ * @;
+
+
+1.1
+date	2016.06.25.03.48.36;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@lseek
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include"header.h"
+#include"declaration.h"
+
+loff_t dev_lseek(struct file * filep, loff_t loff, int seek)
+{
+	printk(KERN_INFO "BEGIN: %s", __func__);
+	printk(KERN_INFO "END: %s", __func__);
+	return 0;
+}
+@

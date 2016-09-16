@@ -1,0 +1,258 @@
+head	1.14;
+access;
+symbols;
+locks
+	ravi_raja:1.14; strict;
+comment	@ * @;
+
+
+1.14
+date	2016.07.12.08.31.22;	author ravi_raja;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.07.12.06.20.19;	author ravi_raja;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.07.11.18.42.59;	author ravi_raja;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.07.11.18.41.42;	author ravi_raja;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.07.10.12.19.24;	author ravi_raja;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.07.01.07.29.02;	author ravi_raja;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.06.30.06.44.14;	author ravi_raja;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.06.27.08.44.50;	author ravi_raja;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.06.21.10.31.31;	author ravi_raja;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.06.20.07.51.46;	author ravi_raja;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.06.17.19.51.01;	author ravi_raja;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.17.10.04.01;	author ravi_raja;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.06.17.09.49.04;	author ravi_raja;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.17.07.24.18;	author ravi_raja;	state Exp;
+branches;
+next	;
+
+
+desc
+@linux/init.h
+linux/modules.h
+@
+
+
+1.14
+log
+@linux/spinlock.h included
+@
+text
+@#include<linux/init.h>
+#include<linux/module.h>
+#include<linux/fs.h>
+#include<linux/slab.h>
+#include<linux/cdev.h>
+#include<linux/delay.h>
+#include<linux/moduleparam.h>
+#include<linux/kernel.h>
+#include<asm-generic/uaccess.h>
+#include<linux/semaphore.h>
+#include<linux/completion.h>
+#include<linux/spinlock.h>
+
+MODULE_LICENSE("GPL");
+
+#ifndef MY_DRIVER
+#define NAME "MY_DRIVER"
+#endif
+
+#ifndef MAJORNO
+#define MAJORNO 0
+#endif
+
+#ifndef MINORNO
+#define MINORNO 0
+#endif
+
+#ifndef NOD
+#define NOD 1
+#endif
+
+#ifndef QSETSIZE
+#define QSETSIZE 8
+#endif
+
+#ifndef QUANTUMSIZE
+#define QUANTUMSIZE 8
+#endif
+
+#ifndef DEVICESIZE
+#define DEVICESIZE 1024
+#endif
+
+#ifndef DATASIZE
+#define DATASIZE 0
+#endif
+@
+
+
+1.13
+log
+@linux/completion.h included for implementing completion synchronization technique
+@
+text
+@d12 1
+@
+
+
+1.12
+log
+@asm/semaphore.h replaced by linux/ semaphore.h
+@
+text
+@d11 1
+@
+
+
+1.11
+log
+@header asm/semaphore.h included
+@
+text
+@d10 1
+a10 1
+#include<asm/semaphore.h>
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d10 1
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d6 1
+@
+
+
+1.8
+log
+@asm-generic/uaccess.h included
+@
+text
+@d35 8
+@
+
+
+1.7
+log
+@macro for QSETSIZE and QUANTUMSIZE declared
+@
+text
+@d8 1
+@
+
+
+1.6
+log
+@kernel.h included
+@
+text
+@d26 8
+@
+
+
+1.5
+log
+@moduleparam.h included
+@
+text
+@d7 1
+@
+
+
+1.4
+log
+@included slab.h and cdev.h
+@
+text
+@d6 1
+@
+
+
+1.3
+log
+@macros defined earlier is saved now
+@
+text
+@d4 2
+d19 4
+@
+
+
+1.2
+log
+@macros are defined for assigning name, major no, minor no to the driver while registering
+fs.h header file included
+@
+text
+@d7 11
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+@
